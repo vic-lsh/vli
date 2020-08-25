@@ -19,7 +19,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src="/gh-32.png" />
+            <img className={styles.logo} src="/github-logo.svg" />
           </a>
         </div>
       </main>
