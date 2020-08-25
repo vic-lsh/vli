@@ -1,6 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
+const GH_URL = "https://www.github.com/vic-lee";
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -14,7 +16,7 @@ export default function Home() {
 
         <div className={styles.links}>
           <a
-            href="https://www.github.com/vic-lee"
+            href={GH_URL}
             style={{ padding: "2rem" }}
             target="_blank"
             rel="noopener noreferrer"

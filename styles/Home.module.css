@@ -8,18 +8,25 @@
 }
 
 .main {
-  padding: 5rem 0;
+  margin: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  border: solid black;
+  width: 100%;
+  min-width: 20rem;
+  max-width: 30rem;
+  max-height: 40rem;
 }
 
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 5rem;
+  color: blue;
 }
 
 .code {
