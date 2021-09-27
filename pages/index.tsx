@@ -12,8 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <main>
-        <h1 className="text-8xl text-blue-700">Vic Li</h1>
+      <main className="flex flex-col h-screen justify-center items-center">
+        <h1 className="text-7xl text-blue-700">Shihang (Vic) Li</h1>
 
         <div className="m-8">
           <LinkToNewTab href={GH_URL}>
@@ -24,6 +24,23 @@ export default function Home() {
               height="20px"
             />
           </LinkToNewTab>
+        </div>
+
+        <div className="flex flex-col gap-4 max-w-2xl">
+          <p className="text-justify">{`
+          Hi! I'm Vic, a Master's Computer Science student at Brown.
+          I'm interested in making distributed systems easier to use and reason
+          about. I'm also interested in how programming language design
+          influences the way we think about programming.
+        `}</p>
+          <p className="text-justify">
+            {`In my spare time, I enjoy hiking, snowboarding, urban photography,
+          and playing the piano.`}
+          </p>
+          <p className="text-justify">
+            {" "}
+            I also enjoy programming in TypeScript. A lot.
+          </p>
         </div>
       </main>
     </div>
