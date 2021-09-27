@@ -17,12 +17,16 @@ export default function Home() {
 
         <div className="m-8">
           <LinkToNewTab href={GH_URL}>
-            <Image
-              alt="GitHub Logo"
-              src="/github-logo.svg"
-              width="20px"
-              height="20px"
-            />
+            <span className="flex items-center justify-center gap-2">
+              <Image
+                alt="GitHub Logo"
+                src="/github-logo.svg"
+                width="16px"
+                height="16px"
+              />
+
+              <span className="underline">vic-shihang-li</span>
+            </span>
           </LinkToNewTab>
         </div>
 
