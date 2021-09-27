@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import { LinkToNewTab } from "../components/link-new-tab";
 
 const GH_URL = "https://www.github.com/vic-shihang-li";
 
@@ -16,12 +17,7 @@ export default function Home() {
         <h1 className={styles.title}>Vic Li</h1>
 
         <div className={styles.links}>
-          <a
-            href={GH_URL}
-            style={{ padding: "2rem" }}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <LinkToNewTab href={GH_URL}>
             <Image
               className={styles.logo}
               alt="GitHub Logo"
@@ -29,7 +25,7 @@ export default function Home() {
               width="30px"
               height="30px"
             />
-          </a>
+          </LinkToNewTab>
         </div>
       </main>
     </div>
