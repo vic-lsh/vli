@@ -17,12 +17,12 @@ export default function Home() {
       <main className="flex flex-col h-screen justify-center items-center">
         <h1 className="text-7xl text-blue-700">Shihang (Vic) Li</h1>
 
-        <div className="m-8">
+        <div className="m-8 flex flex-col justify-center items-start">
           <LinkToNewTab href={GH_URL}>
             <span className="flex items-center justify-center gap-2">
               <Image
-                alt="GitHub Logo"
                 src="/github-logo.svg"
+                alt="Github Logo"
                 width="16px"
                 height="16px"
               />
@@ -34,12 +34,11 @@ export default function Home() {
           <LinkToNewTab href={`mailto:${EMAIL_ADDR}`}>
             <span className="flex items-center justify-center gap-2">
               <Image
-                alt="GitHub Logo"
-                src="/github-logo.svg"
+                src="/mail-icon.png"
+                alt="Mail Logo"
                 width="16px"
                 height="16px"
               />
-
               <span className="underline">{EMAIL_ADDR}</span>
             </span>
           </LinkToNewTab>
