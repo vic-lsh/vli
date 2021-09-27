@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-const GH_URL = "https://www.github.com/vic-lee";
+const GH_URL = "https://www.github.com/vic-shihang-li";
 
 export default function Home() {
   return (
