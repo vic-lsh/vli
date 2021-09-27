@@ -15,9 +15,9 @@ export default function Home() {
       </Head>
 
       <main className="flex flex-col h-screen justify-center items-center">
-        <h1 className="text-7xl text-blue-700">Shihang (Vic) Li</h1>
+        <h1 className="text-7xl text-blue-800 font-serif">Shihang (Vic) Li</h1>
 
-        <div className="m-8 flex flex-col justify-center items-start">
+        <div className="m-10 flex flex-col justify-center items-start">
           <LinkToNewTab href={GH_URL}>
             <span className="flex items-center justify-center gap-2">
               <Image
@@ -56,7 +56,6 @@ export default function Home() {
           and playing the piano.`}
           </p>
           <p className="text-justify">
-            {" "}
             I also enjoy programming in TypeScript. A lot.
           </p>
         </div>
