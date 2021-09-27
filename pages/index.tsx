@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import React from "react";
 import { LinkToNewTab } from "../components/link-new-tab";
 
 const GH_URL = "https://www.github.com/vic-shihang-li";
@@ -14,8 +15,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <main className="flex flex-col h-screen justify-center items-center">
-        <h1 className="text-7xl text-blue-800 font-serif">Shihang (Vic) Li</h1>
+      <main className="flex flex-col h-screen py-10 px-5 md:justify-center items-center">
+        <h1 className="text-center text-7xl text-blue-800 font-serif">
+          Shihang (Vic) Li
+        </h1>
 
         <div className="m-10 flex flex-col justify-center items-start">
           <LinkToNewTab href={GH_URL}>
