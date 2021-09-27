@@ -4,6 +4,8 @@ import { LinkToNewTab } from "../components/link-new-tab";
 
 const GH_URL = "https://www.github.com/vic-shihang-li";
 
+const EMAIL_ADDR = "shihang_li@cs.brown.edu";
+
 export default function Home() {
   return (
     <div>
@@ -26,6 +28,19 @@ export default function Home() {
               />
 
               <span className="underline">vic-shihang-li</span>
+            </span>
+          </LinkToNewTab>
+
+          <LinkToNewTab href={`mailto:${EMAIL_ADDR}`}>
+            <span className="flex items-center justify-center gap-2">
+              <Image
+                alt="GitHub Logo"
+                src="/github-logo.svg"
+                width="16px"
+                height="16px"
+              />
+
+              <span className="underline">{EMAIL_ADDR}</span>
             </span>
           </LinkToNewTab>
         </div>
