@@ -20,8 +20,8 @@ export default function Home() {
             <Image
               alt="GitHub Logo"
               src="/github-logo.svg"
-              width="30px"
-              height="30px"
+              width="20px"
+              height="20px"
             />
           </LinkToNewTab>
         </div>
