@@ -26,6 +26,8 @@ export default function Home() {
               className={styles.logo}
               alt="GitHub Logo"
               src="/github-logo.svg"
+              width="30px"
+              height="30px"
             />
           </a>
         </div>
