@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
 const GH_URL = "https://www.github.com/vic-shihang-li";
 
@@ -21,7 +22,11 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.logo} src="/github-logo.svg" />
+            <Image
+              className={styles.logo}
+              alt="GitHub Logo"
+              src="/github-logo.svg"
+            />
           </a>
         </div>
       </main>
