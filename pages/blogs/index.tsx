@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import { Post, readPosts } from "../../libs/posts";
-import { BlogPost } from "../../components/blog-post";
+import { PostPreview } from "../../components/post-preview";
 
 interface StaticProps {
   posts: Post[];
@@ -15,7 +15,7 @@ export default function Blogs({ posts }: StaticProps) {
 
       <div className="py-8">
         {posts.map((post) => (
-          <BlogPost key={post.slug} post={post} />
+          <PostPreview key={post.slug} post={post} />
         ))}
       </div>
     </main>

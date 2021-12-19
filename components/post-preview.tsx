@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from "react";
+import React, { useMemo } from "react";
 import { Post } from "../libs/posts";
 
 interface Props {
@@ -9,12 +9,12 @@ const trimSummary = (nWords: number, body: string) => {
   return body.split(" ").slice(0, nWords).join(" ");
 };
 
-export const BlogPost: React.FC<Props> = ({ post }) => {
+export const PostPreview: React.FC<Props> = ({ post }) => {
   const { title, dateStr } = post.meta;
   const summary = useMemo(() => trimSummary(50, post.content), [post.content]);
 
   return (
-    <header data-cy="blog-post" className="py-3">
+    <header data-cy="post-preview" className="py-3">
       <div className="flex items-center justify-between">
         <h2 data-cy="title" className="text-xl font-medium">
           {title}
