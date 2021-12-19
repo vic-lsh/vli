@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useMemo } from "react";
 import { Post } from "../libs/posts";
 
@@ -14,14 +15,16 @@ export const PostPreview: React.FC<Props> = ({ post }) => {
   const summary = useMemo(() => trimSummary(50, post.content), [post.content]);
 
   return (
-    <header data-cy="post-preview" className="py-3">
-      <div className="flex items-center justify-between">
-        <h2 data-cy="title" className="text-xl font-medium">
-          {title}
-        </h2>
-        <span data-cy="date">{dateStr}</span>
-      </div>
-      <span data-cy="summary">{summary}</span>
-    </header>
+    <Link href="/blogs/[slug]" as={`/blogs/${post.slug}`} passHref>
+      <header data-cy="post-preview" className="py-3">
+        <div className="flex items-center justify-between">
+          <h2 data-cy="title" className="text-xl font-medium">
+            {title}
+          </h2>
+          <span data-cy="date">{dateStr}</span>
+        </div>
+        <span data-cy="summary">{summary}</span>
+      </header>
+    </Link>
   );
 };
