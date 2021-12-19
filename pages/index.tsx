@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { LinkToNewTab } from "../components/link-new-tab";
 
@@ -58,11 +59,31 @@ const PersonalIntro = () => {
   );
 };
 
+const WelcomePageContainer: React.FC = ({ children }) => {
+  return (
+    <main className="h-screen py-20 px-5 max-w-5xl m-auto">{children}</main>
+  );
+};
+
 const NameHeader: React.FC = ({ children }) => {
   return (
     <h1 className="text-center text-7xl text-blue-800 font-serif">
       {children}
     </h1>
+  );
+};
+
+const NavBar: React.FC = ({ children }) => {
+  return <div className="flex justify-end">{children}</div>;
+};
+
+const NavTab: React.FC<{ href: string }> = ({ children, href }) => {
+  return (
+    <Link href={href} passHref>
+      <span className="hover:bg-gray-200 transition-all px-3 py-2 rounded-md underline">
+        {children}
+      </span>
+    </Link>
   );
 };
 
@@ -74,11 +95,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <main className="flex flex-col h-screen py-10 px-5 md:justify-center items-center">
-        <NameHeader>Shihang (Vic) Li</NameHeader>
-        <ContactInfo />
-        <PersonalIntro />
-      </main>
+      <WelcomePageContainer>
+        <NavBar>
+          <NavTab href="/blogs">
+            <span data-cy="blogs-link">Blogs</span>
+          </NavTab>
+        </NavBar>
+
+        <div className="h-full pt-10 md:pt-0 flex flex-col md:justify-center items-center">
+          <NameHeader>Shihang (Vic) Li</NameHeader>
+          <ContactInfo />
+          <PersonalIntro />
+        </div>
+      </WelcomePageContainer>
     </div>
   );
 }
