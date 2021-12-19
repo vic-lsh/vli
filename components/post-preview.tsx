@@ -16,10 +16,10 @@ export const PostPreview: React.FC<Props> = ({ post }) => {
 
   return (
     <Link href="/blogs/[slug]" as={`/blogs/${post.slug}`} passHref>
-      <header data-cy="post-preview" className="py-3">
+      <header data-cy="post-preview" className="py-3 cursor-pointer">
         <div className="flex items-center justify-between">
           <h2 data-cy="title" className="text-xl font-medium">
-            {title}
+            <a className="hover:underline cursor-pointer">{title}</a>
           </h2>
           <span data-cy="date">{dateStr}</span>
         </div>
