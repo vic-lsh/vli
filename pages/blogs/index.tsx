@@ -7,6 +7,20 @@ interface StaticProps {
   posts: Post[];
 }
 
+const BlogPreviews: React.FC<{ posts: Post[] }> = ({ posts }) => {
+  const NO_POSTS_MSG = "Oops, there's no blog post yet.";
+
+  return (
+    <div className="py-8">
+      {posts.length === 0 ? (
+        <div>{NO_POSTS_MSG}</div>
+      ) : (
+        posts.map((post) => <PostPreview key={post.slug} post={post} />)
+      )}
+    </div>
+  );
+};
+
 export default function Blogs({ posts }: StaticProps) {
   return (
     <PostLayout>
@@ -14,11 +28,7 @@ export default function Blogs({ posts }: StaticProps) {
         Blogs
       </h1>
 
-      <div className="py-8">
-        {posts.map((post) => (
-          <PostPreview key={post.slug} post={post} />
-        ))}
-      </div>
+      <BlogPreviews posts={posts}></BlogPreviews>
     </PostLayout>
   );
 }
