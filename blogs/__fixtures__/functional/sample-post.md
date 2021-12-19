@@ -1,7 +1,7 @@
 ---
 title: Hello world lorem ipsum
 date: 12/02/2021
-published: false
+published: true
 ---
 
 The standard Lorem Ipsum passage, used since the 1500s

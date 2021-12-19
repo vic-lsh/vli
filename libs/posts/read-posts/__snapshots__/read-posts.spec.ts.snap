@@ -22,7 +22,7 @@ Section 1.10.33 of \\"de Finibus Bonorum et Malorum\\", written by Cicero in 45 
 ",
     "meta": Object {
       "dateStr": "12/02/2021",
-      "published": false,
+      "published": true,
       "title": "Hello world lorem ipsum",
     },
     "slug": "sample-post",

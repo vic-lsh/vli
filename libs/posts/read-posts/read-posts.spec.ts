@@ -35,6 +35,16 @@ describe("readPosts", () => {
         return currPostDate.getTime();
       }, new Date().getTime());
     });
+
+    it("does not return any unpublished posts", async () => {
+      const posts = await readPosts({ directory: fixturePostsDir });
+
+      const containsUnpublished = posts.some(
+        (post) => post.meta.published === false
+      );
+
+      expect(containsUnpublished).toEqual(false);
+    });
   });
 
   describe("load invalid posts", () => {

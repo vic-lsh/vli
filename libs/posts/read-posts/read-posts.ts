@@ -97,6 +97,7 @@ export const readPosts = (
       }
 
       return getPosts(postFileNames, directory)
+        .then((posts) => filterUnpublished(posts))
         .then((posts) => sortPosts(posts))
         .then((sortedPosts) => resolve(sortedPosts))
         .catch((e) => reject(e));
@@ -109,6 +110,10 @@ async function getPosts(
   directory: string
 ): Promise<Post[]> {
   return Promise.all(postFileNames.map((name) => getPost(directory, name)));
+}
+
+function filterUnpublished(posts: Post[]): Post[] {
+  return posts.filter((p) => p.meta.published);
 }
 
 function sortPosts(posts: Post[]): Post[] {
