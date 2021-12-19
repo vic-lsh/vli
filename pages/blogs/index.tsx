@@ -8,12 +8,17 @@ interface StaticProps {
 
 export default function Blogs({ posts }: StaticProps) {
   return (
-    <div>
-      <h1 data-cy="header">Blogs</h1>
-      {posts.map((post) => (
-        <BlogPost key={post.slug} post={post} />
-      ))}
-    </div>
+    <main className="p-10">
+      <h1 data-cy="header" className="text-5xl">
+        Blogs
+      </h1>
+
+      <div className="py-8">
+        {posts.map((post) => (
+          <BlogPost key={post.slug} post={post} />
+        ))}
+      </div>
+    </main>
   );
 }
 
