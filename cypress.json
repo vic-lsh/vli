@@ -4,8 +4,8 @@
   "downloadsFolder": "tests/e2e/downloads",
   "fixturesFolder": "tests/e2e/fixtures",
   "pluginsFile": false,
-  "screenshotsFolder": "tests/e2e/screenshots",
+  "screenshotsFolder": "tmp/cypress/screenshots",
   "supportFile": false,
   "testFiles": "**/*.spec.*",
-  "videosFolder": "tests/e2e/videos"
+  "videosFolder": "tmp/cypress/videos"
 }
