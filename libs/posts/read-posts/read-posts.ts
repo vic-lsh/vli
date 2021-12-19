@@ -65,6 +65,8 @@ const getPostMeta = (data: { [k: string]: any }): Post["meta"] => {
   return validatePostMeta(extractPostMeta(data));
 };
 
+const getSlug = (mdFilename: string) => mdFilename.replace(/\.md$/, "");
+
 const getPost = (directory: string, fileName: string): Promise<Post> => {
   return new Promise((resolve, reject) => {
     const fullFilePath = path.join(directory, fileName);
@@ -75,9 +77,11 @@ const getPost = (directory: string, fileName: string): Promise<Post> => {
       }
 
       const { data, content } = matter(fileData);
+      const slug = getSlug(fileName);
+
       try {
         const meta = getPostMeta(data);
-        resolve({ content, meta });
+        resolve({ slug, content, meta });
       } catch (e) {
         reject(e);
       }
