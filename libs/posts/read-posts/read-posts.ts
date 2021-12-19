@@ -2,17 +2,13 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 import { Post } from "../model/post.model";
+import { resolvePostsDir } from "./posts-dir";
 
 interface ReadPostsConfig {
   directory: string;
 }
 
-const getFullPathTo = (...pathSegment: string[]) => {
-  const paths = [process.cwd(), ...pathSegment];
-  return path.join(...paths);
-};
-
-const defaultPostsDirectory = getFullPathTo("blogs", "content", "posts");
+const defaultPostsDirectory = resolvePostsDir();
 
 const extractPostMeta = (data: { [k: string]: any }) => {
   const extract = (propName: string, errorMsg: string) => {
