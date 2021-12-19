@@ -15,4 +15,22 @@ describe("Blog page", () => {
     cy.location("pathname").should("match", /\/blogs$/);
     cy.get(dataCy("header")).should("be.visible");
   });
+
+  describe("Blog entries", () => {
+    beforeEach(() => {
+      cy.visit("/blogs");
+    });
+
+    it("should show blog title", () => {
+      cy.get(dataCy("blog-post")).get(dataCy("title"));
+    });
+
+    it("should show content summary", () => {
+      cy.get(dataCy("blog-post")).get(dataCy("summary"));
+    });
+
+    it("should show date posted", () => {
+      cy.get(dataCy("blog-post")).get(dataCy("date"));
+    });
+  });
 });
