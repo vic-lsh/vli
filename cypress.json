@@ -1,3 +1,10 @@
 {
-  "integrationFolder": "tests/e2e"
+  "integrationFolder": "tests/e2e",
+  "downloadsFolder": "tests/e2e/downloads",
+  "fixturesFolder": "tests/e2e/fixtures",
+  "pluginsFile": false,
+  "screenshotsFolder": "tests/e2e/screenshots",
+  "supportFile": false,
+  "testFiles": "**/*.spec.*",
+  "videosFolder": "tests/e2e/videos"
 }
