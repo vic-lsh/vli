@@ -7,7 +7,7 @@ export const PostContent: React.FC<{ post: Post }> = ({ post }) => {
       <h2 className="text-4xl">{post.meta.title}</h2>
       <div>{post.meta.dateStr}</div>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2" data-cy="post-body">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
     </div>
