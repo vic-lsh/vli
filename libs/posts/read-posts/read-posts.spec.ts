@@ -21,7 +21,19 @@ describe("readPosts", () => {
     });
 
     it("can be called without arguments", async () => {
+      // this gets posts from the real directory, where actual posts live
       expect(await readPosts()).not.toBeNull();
+    });
+
+    it("sorts posts in reverse-chronological order", async () => {
+      const posts = await readPosts({ directory: fixturePostsDir });
+
+      // validate posts are sorted in descending date order
+      posts.reduce((prevPostDate, currPost) => {
+        const currPostDate = new Date(currPost.meta.dateStr);
+        expect(currPostDate.getTime()).toBeLessThanOrEqual(prevPostDate);
+        return currPostDate.getTime();
+      }, new Date().getTime());
     });
   });
 

@@ -9,6 +9,6 @@ export interface Post {
     /** The title of this post. */
     title: string;
     /** The release date of this post. */
-    date: Date;
+    dateStr: string;
   };
 }

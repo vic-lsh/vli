@@ -50,13 +50,9 @@ const validatePostMeta = (data: { [k: string]: any }): Post["meta"] => {
     throw new Error(`Cannot coerce '${s}' to a boolean.`);
   };
 
-  const coerceDateString = (s: string): Date => {
-    return new Date(Date.parse(s));
-  };
-
   return {
     title: data.title,
-    date: coerceDateString(data.dateStr),
+    dateStr: data.dateStr,
     published: coerceBoolean(data.published),
   };
 };
@@ -95,13 +91,35 @@ export const readPosts = (
   const { directory = defaultPostsDirectory } = config;
 
   return new Promise((resolve, reject) => {
-    fs.readdir(directory, (err, postFileNames) => {
+    fs.readdir(directory, async (err, postFileNames) => {
       if (err) {
         reject(`posts directory does not exist: ${directory}`);
       }
-      resolve(
-        Promise.all(postFileNames.map((name) => getPost(directory, name)))
-      );
+
+      return getPosts(postFileNames, directory)
+        .then((posts) => sortPosts(posts))
+        .then((sortedPosts) => resolve(sortedPosts))
+        .catch((e) => reject(e));
     });
   });
 };
+
+async function getPosts(
+  postFileNames: string[],
+  directory: string
+): Promise<Post[]> {
+  return Promise.all(postFileNames.map((name) => getPost(directory, name)));
+}
+
+function sortPosts(posts: Post[]): Post[] {
+  const coerceDateString = (s: string): Date => {
+    return new Date(Date.parse(s));
+  };
+
+  return posts.sort((post1, post2) => {
+    const post1Date = coerceDateString(post1.meta.dateStr);
+    const post2Date = coerceDateString(post2.meta.dateStr);
+
+    return post1Date.getTime() > post2Date.getTime() ? -1 : 1;
+  });
+}
