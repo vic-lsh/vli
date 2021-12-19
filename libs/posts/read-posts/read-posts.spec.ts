@@ -1,19 +1,9 @@
-import path from "path";
+import { makePostsFixturePath } from "./posts-dir";
 import { readPosts } from "./read-posts";
-
-const makeAbsPath = (...pathSegment: string[]) => {
-  const paths = [process.cwd(), ...pathSegment];
-  return path.join(...paths);
-};
-
-const makeFixturePath = (...subDirectory: string[]) => {
-  const segments = ["blogs", "__fixtures__", ...subDirectory];
-  return makeAbsPath(...segments);
-};
 
 describe("readPosts", () => {
   describe("load posts", () => {
-    const fixturePostsDir = makeFixturePath("functional");
+    const fixturePostsDir = makePostsFixturePath("functional");
 
     it("should read posts from the posts directory", async () => {
       const posts = await readPosts({ directory: fixturePostsDir });
@@ -59,7 +49,7 @@ describe("readPosts", () => {
 
     it("should reject if a blog post does not contain title", async () => {
       await expectGetPostsRejection(
-        makeFixturePath("invalid", "missing-title"),
+        makePostsFixturePath("invalid", "missing-title"),
         new Error("Post must have a title")
       );
     });
@@ -67,14 +57,14 @@ describe("readPosts", () => {
 
     it("should reject if a blog post does not contain publish date", async () => {
       await expectGetPostsRejection(
-        makeFixturePath("invalid", "missing-date"),
+        makePostsFixturePath("invalid", "missing-date"),
         new Error("Post must have a date")
       );
     });
 
     it("should reject if a blog post does not contain published flag", async () => {
       await expectGetPostsRejection(
-        makeFixturePath("invalid", "missing-published-state"),
+        makePostsFixturePath("invalid", "missing-published-state"),
         new Error("Post must have a 'published' flag")
       );
     });
