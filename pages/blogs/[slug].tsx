@@ -1,8 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 
 import React from "react";
-import ReactMarkdown from "react-markdown";
-import { PostBody } from "../../components/post-body";
+import { PostContent } from "../../components/post-content";
 import { PostLayout } from "../../components/post-layout";
 import { getPostBySlug, Post, readPosts } from "../../libs/posts";
 
@@ -13,7 +12,7 @@ interface StaticProps {
 export default function BlogPost({ post }: StaticProps) {
   return (
     <PostLayout>
-      <PostBody post={post} />
+      <PostContent post={post} />
     </PostLayout>
   );
 }
