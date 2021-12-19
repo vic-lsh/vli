@@ -8,8 +8,7 @@
     "start": "next start --port 3005",
     "lint": "next lint",
     "dev-e2e": "cypress open",
-    "test-e2e": "cypress run",
-    "test-e2e:ci": "yarn dev & wait-on http://localhost:3005 && yarn test-e2e"
+    "test-e2e": "cypress run"
   },
   "dependencies": {
     "@commitlint/cli": "^13.1.0",
@@ -27,7 +26,6 @@
     "husky": "^7.0.2",
     "postcss": "^8.3.8",
     "tailwindcss": "^2.2.16",
-    "typescript": "^4.4.3",
-    "wait-on": "^6.0.0"
+    "typescript": "^4.4.3"
   }
 }
