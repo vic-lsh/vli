@@ -1,3 +1,6 @@
 [submodule "blogs"]
 	path = blogs
 	url = https://github.com/vic-shihang-li/vli-blogs.git
+[submodule "blogs/content"]
+	path = blogs/content
+	url = https://github.com/vic-shihang-li/vli-blogs.git
