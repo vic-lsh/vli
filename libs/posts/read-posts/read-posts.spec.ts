@@ -1,10 +1,10 @@
 import { makePostsFixturePath } from "./posts-dir";
-import { readPosts } from "./read-posts";
+import { getPostBySlug, readPosts } from "./read-posts";
+
+const fixturePostsDir = makePostsFixturePath("functional");
 
 describe("readPosts", () => {
   describe("load posts", () => {
-    const fixturePostsDir = makePostsFixturePath("functional");
-
     it("should read posts from the posts directory", async () => {
       const posts = await readPosts({ directory: fixturePostsDir });
       expect(posts).toMatchSnapshot();
@@ -68,5 +68,13 @@ describe("readPosts", () => {
         new Error("Post must have a 'published' flag")
       );
     });
+  });
+});
+
+describe("getPostBySlug", () => {
+  it("should be able to retrieve a blog post", async () => {
+    expect(
+      await getPostBySlug("sample-post", { directory: fixturePostsDir })
+    ).toMatchSnapshot();
   });
 });

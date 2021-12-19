@@ -30,6 +30,14 @@ export function readPosts(
   });
 }
 
+export function getPostBySlug(
+  slug: string,
+  config: Partial<ReadPostsConfig> = {}
+) {
+  const { directory = defaultPostsDirectory } = config;
+  return getPost(directory, `${slug}.md`);
+}
+
 async function getPostsFromDirectory(
   postFileNames: string[],
   directory: string
