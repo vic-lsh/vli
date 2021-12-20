@@ -9,7 +9,7 @@ interface StaticProps {
   post: Post;
 }
 
-export default function BlogPost({ post }: StaticProps) {
+function BlogPost({ post }: StaticProps) {
   return <PostLayout></PostLayout>;
 }
 
@@ -36,3 +36,5 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
+
+export default BlogPost;
