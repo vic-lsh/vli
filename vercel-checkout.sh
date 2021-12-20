@@ -40,6 +40,8 @@ git submodule update --init --recursive 2>&1 | sed "s/$GITHUB_ACCESS_TOKEN/\*\*\
 cd ..
 rm -rf vercel-tmp/$SUBMODULE_PATH/.git
 
+ls -l vercel-tmp/$SUBMODULE_PATH/
+
 mkdir -p $(dirname $SUBMODULE_PATH)
 mv vercel-tmp/$SUBMODULE_PATH/ $SUBMODULE_PATH
 
