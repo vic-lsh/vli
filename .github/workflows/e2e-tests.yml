@@ -6,8 +6,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.CHECKOUT_TOKEN }}
+          submodules: recursive
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: yarn run cypress-ci-build
+          build: yarn run build
           start: yarn run start
