@@ -34,14 +34,16 @@ cat .gitmodules | sed "s/github.com/$GITHUB_ACCESS_TOKEN@&/" > .gitmodules
 # checkout the submodule
 git submodule sync
 git submodule update --init --recursive 2>&1 | sed "s/$GITHUB_ACCESS_TOKEN/\*\*\*\*/"
+echo "checkout successful"
+ls -l vercel-tmp/$SUBMODULE_PATH
+
 # move the submodule to where it should have been if vercel had supported submodules
 cd ..
 rm -rf vercel-tmp/$SUBMODULE_PATH/.git
-if [ -d $SUBMODULE_PATH ]; then
-mv $SUBMODULE_PATH $SUBMODULE_PATH.original
-fi
+
 mkdir -p $(dirname $SUBMODULE_PATH)
 mv vercel-tmp/$SUBMODULE_PATH/ $SUBMODULE_PATH
+
 # show contents of submodule path in logs
 ls -l $SUBMODULE_PATH
 # clean up
