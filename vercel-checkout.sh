@@ -49,3 +49,5 @@ ls -l $SUBMODULE_PATH
 rm -rf vercel-tmp
 
 cat pages/blogs/\[slug\].tsx
+
+git status
