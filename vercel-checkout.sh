@@ -9,6 +9,8 @@
 
 set -e
 
+# here we assume this repo always points to the latest commit in the blog 
+# posts repo. this should be manually obeyed in practice.
 git clone https://$GITHUB_ACCESS_TOKEN@github.com/vic-shihang-li/vli-blogs.git
 
 mv vli-blogs blogs/vli-blogs
