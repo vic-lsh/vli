@@ -29,8 +29,8 @@ git remote add origin https://$GITHUB_ACCESS_TOKEN@$MAIN_REPO
 git fetch --depth=1 origin $VERCEL_GIT_COMMIT_SHA
 git checkout $VERCEL_GIT_COMMIT_SHA
 # set the submodule repo paths to ones that vercel can access
-mv .gitmodules .gitmodules.original
-cat .gitmodules | sed "s/github.com/$GITHUB_ACCESS_TOKEN@&/" > .gitmodules.tmp
+cat .gitmodules > .gitmodules.original
+cat .gitmodules | sed "s/github.com/$GITHUB_ACCESS_TOKEN@&/" > .gitmodules
 # checkout the submodule
 git submodule sync
 git submodule update --init --recursive 2>&1 | sed "s/$GITHUB_ACCESS_TOKEN/\*\*\*\*/"
