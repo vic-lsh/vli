@@ -45,5 +45,7 @@ mv vercel-tmp/$SUBMODULE_PATH/ $SUBMODULE_PATH
 
 # show contents of submodule path in logs
 ls -l $SUBMODULE_PATH
+ls -l blogs/content/posts
+
 # clean up
 rm -rf vercel-tmp
