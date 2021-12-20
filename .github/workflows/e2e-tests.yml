@@ -9,5 +9,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: git submodule update --init --recursive && yarn run build
+          build: yarn run cypress-ci-build
           start: yarn run start
