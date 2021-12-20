@@ -10,11 +10,7 @@ interface StaticProps {
 }
 
 export default function BlogPost({ post }: StaticProps) {
-  return (
-    <PostLayout>
-      <PostContent post={post} />
-    </PostLayout>
-  );
+  return <PostLayout></PostLayout>;
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
