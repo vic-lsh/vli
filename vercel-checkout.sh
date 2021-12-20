@@ -6,7 +6,7 @@
 # repo paths (supplied without the protocol prefix)
 MAIN_REPO=github.com/vic-shihang-li/vli.git
 # the reference of the submodule in .gitmodules (usually the path)
-SUBMODULE_REF=blogs/content
+SUBMODULE_PATH=blogs/content
 
 if [ "$VERCEL_GIT_COMMIT_SHA" == "" ]; then
   echo "Error: VERCEL_GIT_COMMIT_SHA is empty"
