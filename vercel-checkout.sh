@@ -47,3 +47,5 @@ mv vercel-tmp/$SUBMODULE_PATH/ $SUBMODULE_PATH
 ls -l $SUBMODULE_PATH
 # clean up
 rm -rf vercel-tmp
+
+cat pages/blogs/\[slug\].tsx
