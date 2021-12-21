@@ -93,6 +93,10 @@ export default function Home() {
       <Head>
         <title>Vic Li</title>
         <link rel="icon" href="/favicon.svg" />
+        <meta
+          name="description"
+          content="Shihang (Vic) Li, a curious student figuring out his path in Computer Science."
+        ></meta>
       </Head>
 
       <WelcomePageContainer>
