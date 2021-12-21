@@ -8,24 +8,27 @@ const GH_URL = "https://www.github.com/vic-shihang-li";
 
 const EMAIL_ADDR = "shihang_li@cs.brown.edu";
 
+const ContactInfoContainer: React.FC = ({ children }) => (
+  <span className="flex items-center justify-center gap-2">{children}</span>
+);
+
 const ContactInfo = () => {
   return (
     <div className="m-10 flex flex-col justify-center items-start">
       <LinkToNewTab href={GH_URL}>
-        <span className="flex items-center justify-center gap-2">
+        <ContactInfoContainer>
           <Image
             src="/github-logo.svg"
             alt="Github Logo"
             width="16px"
             height="16px"
           />
-
           <span className="underline">vic-shihang-li</span>
-        </span>
+        </ContactInfoContainer>
       </LinkToNewTab>
 
       <LinkToNewTab href={`mailto:${EMAIL_ADDR}`}>
-        <span className="flex items-center justify-center gap-2">
+        <ContactInfoContainer>
           <Image
             src="/mail-icon.png"
             alt="Mail Logo"
@@ -33,7 +36,7 @@ const ContactInfo = () => {
             height="16px"
           />
           <span className="underline">{EMAIL_ADDR}</span>
-        </span>
+        </ContactInfoContainer>
       </LinkToNewTab>
     </div>
   );
