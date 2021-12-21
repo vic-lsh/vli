@@ -48,7 +48,7 @@ const ContactInfo = () => {
 const PersonalIntro = () => {
   return (
     <div className="flex flex-col gap-4 max-w-2xl">
-      <p className="text-justify ">{`
+      <p className="text-justify">{`
   Hi! I'm Vic, a Master's Computer Science student at Brown.
   I'm interested in making multi-threaded programs easier to write and reason
   about. I'm also interested in how programming language design
