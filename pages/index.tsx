@@ -10,7 +10,9 @@ const GH_URL = "https://www.github.com/vic-shihang-li";
 const EMAIL_ADDR = "shihang_li@cs.brown.edu";
 
 const ContactInfoContainer: React.FC = ({ children }) => (
-  <span className="flex items-center justify-center gap-2">{children}</span>
+  <span className="flex items-center justify-center gap-2 dark:text-gray-300">
+    {children}
+  </span>
 );
 
 const ContactInfo = () => {
@@ -46,7 +48,7 @@ const ContactInfo = () => {
 const PersonalIntro = () => {
   return (
     <div className="flex flex-col gap-4 max-w-2xl">
-      <p className="text-justify">{`
+      <p className="text-justify ">{`
   Hi! I'm Vic, a Master's Computer Science student at Brown.
   I'm interested in making multi-threaded programs easier to write and reason
   about. I'm also interested in how programming language design
@@ -65,7 +67,7 @@ const PersonalIntro = () => {
 
 const NameHeader: React.FC = ({ children }) => {
   return (
-    <h1 className="text-center text-7xl text-blue-800 font-serif">
+    <h1 className="text-center text-7xl text-blue-800 dark:text-blue-300 font-serif">
       {children}
     </h1>
   );
@@ -83,17 +85,19 @@ export default function Home() {
         ></meta>
       </Head>
 
-      <main className="h-screen py-10 md:py-20 px-5 max-w-5xl m-auto">
-        <NavBar>
-          <NavTab href="/blogs">
-            <span data-cy="blogs-link">Blogs</span>
-          </NavTab>
-        </NavBar>
+      <main className="h-screen py-10 md:py-20 px-5 dark:bg-gray-900 dark:text-gray-200">
+        <div className="max-w-5xl m-auto">
+          <NavBar>
+            <NavTab href="/blogs">
+              <span data-cy="blogs-link">Blogs</span>
+            </NavTab>
+          </NavBar>
 
-        <div className="mt-10 md:mt-32 md:pt-0 flex flex-col md:justify-center items-center">
-          <NameHeader>Shihang (Vic) Li</NameHeader>
-          <ContactInfo />
-          <PersonalIntro />
+          <div className="mt-10 md:mt-32 md:pt-0 flex flex-col md:justify-center items-center">
+            <NameHeader>Shihang (Vic) Li</NameHeader>
+            <ContactInfo />
+            <PersonalIntro />
+          </div>
         </div>
       </main>
     </div>
