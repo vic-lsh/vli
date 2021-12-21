@@ -14,14 +14,14 @@ const ContactInfoContainer: React.FC = ({ children }) => (
 
 const ContactInfo = () => {
   return (
-    <div className="m-10 flex flex-col justify-center items-start">
+    <div className="m-10 gap-2 flex flex-col justify-center items-start">
       <LinkToNewTab href={GH_URL}>
         <ContactInfoContainer>
           <Image
             src="/github-logo.svg"
             alt="Github Logo"
             width="16px"
-            height="16px"
+            height="20px"
           />
           <span className="underline">vic-shihang-li</span>
         </ContactInfoContainer>
