@@ -17,14 +17,14 @@ export const PostPreview: React.FC<Props> = ({ post }) => {
   return (
     <Link href="/blogs/[slug]" as={`/blogs/${post.slug}`} passHref>
       <header data-cy="post-preview" className="py-6 cursor-pointer">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-2 py-2 md:flex-row md:items-center md:justify-between">
           <h2
             data-cy="title"
-            className="text-2xl font-medium py-2 dark:text-dark-accent"
+            className="text-2xl font-medium dark:text-dark-accent"
           >
             <a className="hover:underline cursor-pointer">{title}</a>
           </h2>
-          <span data-cy="date" className="dark:text-gray-300">
+          <span data-cy="date" className="dark:text-gray-400">
             {dateStr}
           </span>
         </div>
