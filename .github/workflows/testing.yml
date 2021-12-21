@@ -1,0 +1,35 @@
+name: Run tests
+on: [pull_request, push]
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.CHECKOUT_TOKEN }}
+          submodules: recursive
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Jest run
+        run: yarn test
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: yarn run test-build
+          start: yarn run start
