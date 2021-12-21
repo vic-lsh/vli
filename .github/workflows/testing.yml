@@ -10,6 +10,9 @@ jobs:
           token: ${{ secrets.CHECKOUT_TOKEN }}
           submodules: recursive
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Jest run
         run: yarn test
 
