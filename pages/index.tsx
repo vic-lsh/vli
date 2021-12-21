@@ -59,12 +59,6 @@ const PersonalIntro = () => {
   );
 };
 
-const WelcomePageContainer: React.FC = ({ children }) => {
-  return (
-    <main className="h-screen py-20 px-5 max-w-5xl m-auto">{children}</main>
-  );
-};
-
 const NameHeader: React.FC = ({ children }) => {
   return (
     <h1 className="text-center text-7xl text-blue-800 font-serif">
@@ -99,19 +93,19 @@ export default function Home() {
         ></meta>
       </Head>
 
-      <WelcomePageContainer>
+      <main className="h-screen py-10 md:py-20 px-5 max-w-5xl m-auto">
         <NavBar>
           <NavTab href="/blogs">
             <span data-cy="blogs-link">Blogs</span>
           </NavTab>
         </NavBar>
 
-        <div className="h-full pt-10 md:pt-0 flex flex-col md:justify-center items-center">
+        <div className="mt-10 md:mt-32 md:pt-0 flex flex-col md:justify-center items-center">
           <NameHeader>Shihang (Vic) Li</NameHeader>
           <ContactInfo />
           <PersonalIntro />
         </div>
-      </WelcomePageContainer>
+      </main>
     </div>
   );
 }
