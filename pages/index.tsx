@@ -47,7 +47,7 @@ const PersonalIntro = () => {
     <div className="flex flex-col gap-4 max-w-2xl">
       <p className="text-justify">{`
   Hi! I'm Vic, a Master's Computer Science student at Brown.
-  I'm interested in making distributed systems easier to use and reason
+  I'm interested in making multi-threaded programs easier to write and reason
   about. I'm also interested in how programming language design
   influences the way we think about programming.
 `}</p>
@@ -56,7 +56,7 @@ const PersonalIntro = () => {
   and playing the piano.`}
       </p>
       <p className="text-justify">
-        I also enjoy programming in TypeScript. A lot.
+        I enjoy programming in TypeScript, among many other languages.
       </p>
     </div>
   );
