@@ -23,6 +23,7 @@ const ContactInfo = () => {
             alt="Github Logo"
             width="16px"
             height="20px"
+            className="dark:invert-90"
           />
           <span className="underline">vic-shihang-li</span>
         </ContactInfoContainer>
@@ -35,6 +36,7 @@ const ContactInfo = () => {
             alt="Mail Logo"
             width="16px"
             height="16px"
+            className="dark:invert-90"
           />
           <span className="underline">{EMAIL_ADDR}</span>
         </ContactInfoContainer>

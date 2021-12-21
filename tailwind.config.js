@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         "html-blue": "#0000ff",
       },
+      invert: { 25: ".25", 50: ".5", 75: ".75", 90: ".9" },
     },
   },
   plugins: [],
