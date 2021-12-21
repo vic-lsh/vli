@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { LinkToNewTab } from "../components/link-new-tab";
+import { NavBar } from "../components/nav-bar";
+import { NavTab } from "../components/nav-tab";
 
 const GH_URL = "https://www.github.com/vic-shihang-li";
 
@@ -67,20 +68,6 @@ const NameHeader: React.FC = ({ children }) => {
     <h1 className="text-center text-7xl text-blue-800 font-serif">
       {children}
     </h1>
-  );
-};
-
-const NavBar: React.FC = ({ children }) => {
-  return <div className="flex justify-end">{children}</div>;
-};
-
-const NavTab: React.FC<{ href: string }> = ({ children, href }) => {
-  return (
-    <Link href={href} passHref>
-      <span className="hover:bg-gray-200 transition-all px-3 py-2 rounded-md underline">
-        {children}
-      </span>
-    </Link>
   );
 };
 

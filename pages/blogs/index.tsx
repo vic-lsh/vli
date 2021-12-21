@@ -2,6 +2,7 @@ import { GetStaticProps } from "next";
 import { Post, readPosts } from "../../libs/posts";
 import { PostPreview } from "../../components/post-preview";
 import { PostLayout } from "../../components/post-layout";
+import { SubrouteHeading } from "../../components/subroute-heading";
 
 interface StaticProps {
   posts: Post[];
@@ -24,9 +25,9 @@ const BlogPreviews: React.FC<{ posts: Post[] }> = ({ posts }) => {
 export default function Blogs({ posts }: StaticProps) {
   return (
     <PostLayout>
-      <h1 data-cy="header" className="text-5xl">
-        Blogs
-      </h1>
+      <SubrouteHeading>
+        <span data-cy="header">/blogs</span>
+      </SubrouteHeading>
 
       <BlogPreviews posts={posts}></BlogPreviews>
     </PostLayout>
