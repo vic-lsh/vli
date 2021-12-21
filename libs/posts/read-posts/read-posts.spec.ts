@@ -53,7 +53,6 @@ describe("readPosts", () => {
         new Error("Post must have a title")
       );
     });
-    ``;
 
     it("should reject if a blog post does not contain publish date", async () => {
       await expectGetPostsRejection(

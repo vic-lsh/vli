@@ -12,7 +12,7 @@ const BlogPreviews: React.FC<{ posts: Post[] }> = ({ posts }) => {
   const NO_POSTS_MSG = "Oops, there's no blog post yet.";
 
   return (
-    <div className="py-8">
+    <div className="py-6">
       {posts.length === 0 ? (
         <div>{NO_POSTS_MSG}</div>
       ) : (

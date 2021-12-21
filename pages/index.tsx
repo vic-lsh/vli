@@ -23,6 +23,7 @@ const ContactInfo = () => {
             alt="Github Logo"
             width="16px"
             height="20px"
+            className="dark:invert-90"
           />
           <span className="underline">vic-shihang-li</span>
         </ContactInfoContainer>
@@ -35,6 +36,7 @@ const ContactInfo = () => {
             alt="Mail Logo"
             width="16px"
             height="16px"
+            className="dark:invert-90"
           />
           <span className="underline">{EMAIL_ADDR}</span>
         </ContactInfoContainer>
@@ -65,7 +67,7 @@ const PersonalIntro = () => {
 
 const NameHeader: React.FC = ({ children }) => {
   return (
-    <h1 className="text-center text-7xl text-blue-800 font-serif">
+    <h1 className="text-center text-7xl text-blue-800 dark:text-dark-accent font-serif">
       {children}
     </h1>
   );
