@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { RootStyleContainer } from "../components/root-style-container";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -22,8 +23,10 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
-          <Main />
-          <NextScript />
+          <RootStyleContainer>
+            <Main />
+            <NextScript />
+          </RootStyleContainer>
         </body>
       </Html>
     );
