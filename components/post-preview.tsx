@@ -20,7 +20,7 @@ export const PostPreview: React.FC<Props> = ({ post }) => {
         <div className="flex items-center justify-between">
           <h2
             data-cy="title"
-            className="text-2xl font-medium py-2 dark:text-blue-300"
+            className="text-2xl font-medium py-2 dark:text-dark-accent"
           >
             <a className="hover:underline cursor-pointer">{title}</a>
           </h2>

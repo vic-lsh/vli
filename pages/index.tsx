@@ -67,7 +67,7 @@ const PersonalIntro = () => {
 
 const NameHeader: React.FC = ({ children }) => {
   return (
-    <h1 className="text-center text-7xl text-blue-800 dark:text-blue-300 font-serif">
+    <h1 className="text-center text-7xl text-blue-800 dark:text-dark-accent font-serif">
       {children}
     </h1>
   );
