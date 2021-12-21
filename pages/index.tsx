@@ -8,24 +8,27 @@ const GH_URL = "https://www.github.com/vic-shihang-li";
 
 const EMAIL_ADDR = "shihang_li@cs.brown.edu";
 
+const ContactInfoContainer: React.FC = ({ children }) => (
+  <span className="flex items-center justify-center gap-2">{children}</span>
+);
+
 const ContactInfo = () => {
   return (
-    <div className="m-10 flex flex-col justify-center items-start">
+    <div className="m-10 gap-2 flex flex-col justify-center items-start">
       <LinkToNewTab href={GH_URL}>
-        <span className="flex items-center justify-center gap-2">
+        <ContactInfoContainer>
           <Image
             src="/github-logo.svg"
             alt="Github Logo"
             width="16px"
-            height="16px"
+            height="20px"
           />
-
           <span className="underline">vic-shihang-li</span>
-        </span>
+        </ContactInfoContainer>
       </LinkToNewTab>
 
       <LinkToNewTab href={`mailto:${EMAIL_ADDR}`}>
-        <span className="flex items-center justify-center gap-2">
+        <ContactInfoContainer>
           <Image
             src="/mail-icon.png"
             alt="Mail Logo"
@@ -33,7 +36,7 @@ const ContactInfo = () => {
             height="16px"
           />
           <span className="underline">{EMAIL_ADDR}</span>
-        </span>
+        </ContactInfoContainer>
       </LinkToNewTab>
     </div>
   );
@@ -44,7 +47,7 @@ const PersonalIntro = () => {
     <div className="flex flex-col gap-4 max-w-2xl">
       <p className="text-justify">{`
   Hi! I'm Vic, a Master's Computer Science student at Brown.
-  I'm interested in making distributed systems easier to use and reason
+  I'm interested in making multi-threaded programs easier to write and reason
   about. I'm also interested in how programming language design
   influences the way we think about programming.
 `}</p>
@@ -53,15 +56,9 @@ const PersonalIntro = () => {
   and playing the piano.`}
       </p>
       <p className="text-justify">
-        I also enjoy programming in TypeScript. A lot.
+        I enjoy programming in TypeScript, among many other languages.
       </p>
     </div>
-  );
-};
-
-const WelcomePageContainer: React.FC = ({ children }) => {
-  return (
-    <main className="h-screen py-20 px-5 max-w-5xl m-auto">{children}</main>
   );
 };
 
@@ -99,19 +96,19 @@ export default function Home() {
         ></meta>
       </Head>
 
-      <WelcomePageContainer>
+      <main className="h-screen py-10 md:py-20 px-5 max-w-5xl m-auto">
         <NavBar>
           <NavTab href="/blogs">
             <span data-cy="blogs-link">Blogs</span>
           </NavTab>
         </NavBar>
 
-        <div className="h-full pt-10 md:pt-0 flex flex-col md:justify-center items-center">
+        <div className="mt-10 md:mt-32 md:pt-0 flex flex-col md:justify-center items-center">
           <NameHeader>Shihang (Vic) Li</NameHeader>
           <ContactInfo />
           <PersonalIntro />
         </div>
-      </WelcomePageContainer>
+      </main>
     </div>
   );
 }
