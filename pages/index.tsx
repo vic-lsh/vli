@@ -67,7 +67,7 @@ const PersonalIntro = () => {
 
 const NameHeader: React.FC = ({ children }) => {
   return (
-    <h1 className="text-center text-7xl text-blue-800 dark:text-dark-accent font-serif">
+    <h1 className="text-center text-4xl md:text-7xl text-blue-800 dark:text-dark-accent font-serif">
       {children}
     </h1>
   );
@@ -92,7 +92,7 @@ export default function Home() {
           </NavTab>
         </NavBar>
 
-        <div className="mt-10 md:mt-32 md:pt-0 flex flex-col md:justify-center items-center">
+        <div className="py-10 md:pt-0 md:mt-32 flex flex-col md:justify-center items-center">
           <NameHeader>Shihang (Vic) Li</NameHeader>
           <ContactInfo />
           <PersonalIntro />
