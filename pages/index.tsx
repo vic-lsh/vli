@@ -9,6 +9,10 @@ const GH_URL = "https://www.github.com/vic-shihang-li";
 
 const EMAIL_ADDR = "shihang_li@cs.brown.edu";
 
+const FEATURE_FLAGS = {
+  enable_blogs: false,
+};
+
 const ContactInfoContainer: React.FC = ({ children }) => (
   <span className="flex items-center justify-center gap-2">{children}</span>
 );
@@ -87,9 +91,11 @@ export default function Home() {
 
       <main className="h-screen py-10 md:py-20 px-5 max-w-5xl m-auto">
         <NavBar>
-          <NavTab href="/blogs">
-            <span data-cy="blogs-link">Blogs</span>
-          </NavTab>
+          {FEATURE_FLAGS.enable_blogs && (
+            <NavTab href="/blogs">
+              <span data-cy="blogs-link">Blogs</span>
+            </NavTab>
+          )}
         </NavBar>
 
         <div className="py-10 md:pt-0 md:mt-32 flex flex-col md:justify-center items-center">
