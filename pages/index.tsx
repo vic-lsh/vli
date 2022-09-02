@@ -59,7 +59,7 @@ const PersonalIntro = () => {
   and playing the piano.`}
       </p>
       <p className="text-justify">
-        I enjoy programming in TypeScript, among many other languages.
+        I enjoy programming in TypeScript and Rust, among many other languages.
       </p>
     </div>
   );
