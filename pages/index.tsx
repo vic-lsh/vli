@@ -32,12 +32,17 @@ const NameHeader: React.FC = ({ children }) => {
 };
 
 const ProfilePic = () => (
-  <Image
-    src="/profile.jpg"
-    alt="Vic's profile picture."
-    width="200px"
-    height="200px"
-  />
+  <div
+    className="relative border-black border-solid border-4"
+    style={{ width: "200px", height: "200px" }}
+  >
+    <Image
+      src="/profile.jpg"
+      alt="Vic's profile picture."
+      width="200px"
+      height="200px"
+    />
+  </div>
 );
 
 const ContactInfo = () => {
