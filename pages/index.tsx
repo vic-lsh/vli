@@ -112,7 +112,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Vic Li</title>
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.png" />
         <meta
           name="description"
           content="Shihang (Vic) Li, a curious student figuring out his path in Computer Science."
