@@ -23,9 +23,21 @@ const UrlLink: React.FC<{ href: string }> = ({ children, href }) => (
   </a>
 );
 
+const NameHeader: React.FC = ({ children }) => {
+  return (
+    <h1 className="text-center text-4xl md:text-5xl lg:text-7xl text-blue-800 dark:text-dark-accent font-serif">
+      {children}
+    </h1>
+  );
+};
+
+const ProfilePic = () => (
+  <Image src="/profile.jpg" width="200px" height="200px" />
+);
+
 const ContactInfo = () => {
   return (
-    <div className="m-10 gap-2 flex flex-col justify-center items-start">
+    <div className="m-2 gap-1 flex flex-col justify-center items-start">
       <LinkToNewTab href={GH_URL}>
         <ContactInfoContainer>
           <Image
@@ -55,7 +67,19 @@ const ContactInfo = () => {
   );
 };
 
-const PersonalIntro = () => {
+const TitleArea = () => (
+  <span className="m-10 flex flex-col md:flex-row md:items-center">
+    <span className="m-10">
+      <ProfilePic />
+    </span>
+    <span className="flex flex-col gap-2 md:gap-6">
+      <NameHeader>Shihang (Vic) Li</NameHeader>
+      <ContactInfo />
+    </span>
+  </span>
+);
+
+const PersonalIntroArea = () => {
   return (
     <div className="flex flex-col gap-4 max-w-2xl">
       <p className="text-justify">
@@ -84,14 +108,6 @@ const PersonalIntro = () => {
   );
 };
 
-const NameHeader: React.FC = ({ children }) => {
-  return (
-    <h1 className="text-center text-4xl md:text-7xl text-blue-800 dark:text-dark-accent font-serif">
-      {children}
-    </h1>
-  );
-};
-
 export default function Home() {
   return (
     <div>
@@ -104,7 +120,7 @@ export default function Home() {
         ></meta>
       </Head>
 
-      <main className="h-screen py-10 md:py-20 px-5 max-w-5xl m-auto">
+      <main className="h-screen md:py-20 px-5 max-w-5xl m-auto">
         <NavBar>
           {FEATURE_FLAGS.enable_blogs && (
             <NavTab href="/blogs">
@@ -113,10 +129,9 @@ export default function Home() {
           )}
         </NavBar>
 
-        <div className="py-10 md:pt-0 md:mt-32 flex flex-col md:justify-center items-center">
-          <NameHeader>Shihang (Vic) Li</NameHeader>
-          <ContactInfo />
-          <PersonalIntro />
+        <div className="md:pt-0 flex flex-col md:justify-center items-center">
+          <TitleArea />
+          <PersonalIntroArea />
         </div>
       </main>
     </div>
