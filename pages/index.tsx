@@ -32,7 +32,12 @@ const NameHeader: React.FC = ({ children }) => {
 };
 
 const ProfilePic = () => (
-  <Image src="/profile.jpg" width="200px" height="200px" />
+  <Image
+    src="/profile.jpg"
+    alt="Vic's profile picture."
+    width="200px"
+    height="200px"
+  />
 );
 
 const ContactInfo = () => {
