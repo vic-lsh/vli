@@ -82,7 +82,7 @@ const TitleArea = () => (
     <span className="m-10">
       <ProfilePic />
     </span>
-    <span className="flex flex-col gap-2 md:gap-6">
+    <span className="flex flex-col items-center md:items-start gap-2 md:gap-6">
       <NameHeader>Shihang (Vic) Li</NameHeader>
       <ContactInfo />
     </span>
