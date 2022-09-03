@@ -84,25 +84,19 @@ const PersonalIntroArea = () => {
     <div className="flex flex-col gap-4 max-w-2xl">
       <p className="text-justify">
         {`
-  Hi! I'm Vic, a second-year Master's Computer Science student at Brown.
+  Hello there! I'm Vic, a second-year Master's Computer Science student at Brown.
 `}
         I'm currently part of Professor{" "}
         <UrlLink href="https://cs.brown.edu/people/malte/">
           Malte Schwarzkopf
         </UrlLink>
-        's <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>
+        's <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>.
       </p>
       <p className="text-justify">
-        {`I'm interested in making it easier to write safe and fast concurrent 
-  programs. I also like to think about how programming language design
-  influences the way we think about programming.`}
+        {`I'm interested in making it easier to build distributed systems that are safe and fast.`}
       </p>
       <p className="text-justify">
-        {`In my spare time, I enjoy hiking, snowboarding, urban photography,
-  and playing the piano.`}
-      </p>
-      <p className="text-justify">
-        I enjoy programming in TypeScript and Rust, among many other languages.
+        {`In my spare time, I enjoy hiking, snowboarding, and a healthy amount of metaprogramming.`}
       </p>
     </div>
   );
