@@ -17,7 +17,7 @@ const ContactInfoContainer: React.FC = ({ children }) => (
   <span className="flex items-center justify-center gap-2">{children}</span>
 );
 
-const UrlLink: React.FC<{ href: String }> = ({ children, href }) => (
+const UrlLink: React.FC<{ href: string }> = ({ children, href }) => (
   <a className="underline" href={href}>
     {children}
   </a>
@@ -68,7 +68,7 @@ const PersonalIntro = () => {
         </UrlLink>
         's <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>
       </p>
-      <p classname="text-justify">
+      <p className="text-justify">
         {`I'm interested in making it easier to write safe and fast concurrent 
   programs. I also like to think about how programming language design
   influences the way we think about programming.`}
