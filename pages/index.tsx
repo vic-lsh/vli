@@ -96,11 +96,12 @@ const PersonalIntroArea = () => {
         {`
   Hello there! I'm Vic, a second-year Master's Computer Science student at Brown.
 `}
-        I'm currently part of Professor{" "}
+        {`I'm currently part of Professor `}
         <UrlLink href="https://cs.brown.edu/people/malte/">
           Malte Schwarzkopf
         </UrlLink>
-        's <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>.
+        {`'s `}
+        <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>.
       </p>
       <p className="text-justify">
         {`I'm interested in making it easier to build distributed systems that are safe and fast.`}
