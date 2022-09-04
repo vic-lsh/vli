@@ -107,7 +107,7 @@ const PersonalIntroArea = () => {
         {`I'm interested in making it easier to build distributed systems that are safe and fast.`}
       </p>
       <p className="text-justify">
-        {`In my spare time, I enjoy hiking, snowboarding, and a healthy amount of metaprogramming.`}
+        {`In my spare time, I enjoy hiking, snowboarding, and a healthy amount of metaprogramming :)`}
       </p>
     </div>
   );
