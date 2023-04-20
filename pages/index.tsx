@@ -91,7 +91,7 @@ const TitleArea = () => (
 
 const PersonalIntroArea = () => {
   return (
-    <div className="flex flex-col gap-4 max-w-2xl">
+    <div className="flex flex-col gap-4">
       <p className="text-justify">
         {`
   Hello there! I'm Vic, a second-year Master's Computer Science student at Brown.
@@ -109,6 +109,26 @@ const PersonalIntroArea = () => {
       <p className="text-justify">
         {`In my spare time, I enjoy hiking, snowboarding, and a healthy amount of metaprogramming :)`}
       </p>
+    </div>
+  );
+};
+
+const Publications = () => {
+  return (
+    <div>
+      <h2 className="text-2xl">Publications</h2>
+      <div>
+        <div className="py-3">
+          <div className="font-bold">
+            Unleashing True Utility Computing with Quicksand
+          </div>
+          <div>
+            Zhenyuan Ruan, <b>Shihang Li</b>, Kaiyan Fan, Marcos K. Aguilera,
+            Adam Belay, Seo Jin Park, Malte Schwarzkopf
+          </div>
+          <div className="italic">To appear at HotOS 2023</div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -136,7 +156,10 @@ export default function Home() {
 
         <div className="md:pt-0 flex flex-col md:justify-center items-center">
           <TitleArea />
-          <PersonalIntroArea />
+          <div className="max-w-2xl flex flex-col gap-8">
+            <PersonalIntroArea />
+            <Publications />
+          </div>
         </div>
       </main>
     </div>
