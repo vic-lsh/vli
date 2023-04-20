@@ -7,7 +7,7 @@ import { NavTab } from "../components/nav-tab";
 
 const GH_URL = "https://www.github.com/vic-shihang-li";
 
-const EMAIL_ADDR = "shihang_li@cs.brown.edu";
+const EMAIL_ADDR = "shihang_li@brown.edu";
 
 const FEATURE_FLAGS = {
   enable_blogs: false,
