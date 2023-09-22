@@ -32,15 +32,12 @@ const NameHeader: React.FC = ({ children }) => {
 };
 
 const ProfilePic = () => (
-  <div
-    className="relative border-black border-solid border-4"
-    style={{ width: "200px", height: "200px" }}
-  >
+  <div className="relative border-black border-solid border-4">
     <Image
       src="/profile.jpg"
       alt="Vic's profile picture."
-      width="200px"
-      height="200px"
+      width="200"
+      height="200"
     />
   </div>
 );
@@ -53,8 +50,8 @@ const ContactInfo = () => {
           <Image
             src="/github-logo.svg"
             alt="Github Logo"
-            width="16px"
-            height="20px"
+            width="16"
+            height="20"
             className="dark:invert-90"
           />
           <span className="underline">vic-shihang-li</span>
@@ -66,8 +63,8 @@ const ContactInfo = () => {
           <Image
             src="/mail-icon.png"
             alt="Mail Logo"
-            width="16px"
-            height="16px"
+            width="16"
+            height="16"
             className="dark:invert-90"
           />
           <span className="underline">{EMAIL_ADDR}</span>
