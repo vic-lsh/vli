@@ -159,7 +159,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Vic Li</title>
+        <title>Shihang (Vic) Li</title>
         <link rel="icon" href="/favicon.png" />
         <meta
           name="description"
