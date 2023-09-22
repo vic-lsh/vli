@@ -7,7 +7,7 @@ import { NavTab } from "../components/nav-tab";
 
 const GH_URL = "https://www.github.com/vic-shihang-li";
 
-const EMAIL_ADDR = "shihang_li@brown.edu";
+const EMAIL_ADDR = "shli [at] cs.washington.edu";
 
 const FEATURE_FLAGS = {
   enable_blogs: false,
@@ -58,7 +58,7 @@ const ContactInfo = () => {
         </ContactInfoContainer>
       </LinkToNewTab>
 
-      <LinkToNewTab href={`mailto:${EMAIL_ADDR}`}>
+      <LinkToNewTab>
         <ContactInfoContainer>
           <Image
             src="/mail-icon.png"
