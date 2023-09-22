@@ -145,7 +145,13 @@ const Publications = () => {
             Zhenyuan Ruan, <b>Shihang Li</b>, Kaiyan Fan, Marcos K. Aguilera,
             Adam Belay, Seo Jin Park, Malte Schwarzkopf
           </div>
-          <div className="italic">To appear at HotOS 2023</div>
+          <div className="italic">
+            The 19th Workshop on Hot Topics in Operating Systems (
+            <UrlLink href="https://sigops.org/s/conferences/hotos/2023/">
+              HotOS ‘23
+            </UrlLink>
+            )
+          </div>
         </div>
       </div>
     </div>
