@@ -58,18 +58,16 @@ const ContactInfo = () => {
         </ContactInfoContainer>
       </LinkToNewTab>
 
-      <LinkToNewTab>
-        <ContactInfoContainer>
-          <Image
-            src="/mail-icon.png"
-            alt="Mail Logo"
-            width="16"
-            height="16"
-            className="dark:invert-90"
-          />
-          <span className="underline">{EMAIL_ADDR}</span>
-        </ContactInfoContainer>
-      </LinkToNewTab>
+      <ContactInfoContainer>
+        <Image
+          src="/mail-icon.png"
+          alt="Mail Logo"
+          width="16"
+          height="16"
+          className="dark:invert-90"
+        />
+        <span className="underline">{EMAIL_ADDR}</span>
+      </ContactInfoContainer>
     </div>
   );
 };
