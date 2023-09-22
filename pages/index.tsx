@@ -93,32 +93,41 @@ const PersonalIntroArea = () => {
   return (
     <div className="flex flex-col gap-4">
       <p className="text-justify">
-        {`
-  Hello there! I'm Vic, a second-year Computer Science Master's student at Brown.
-`}
-        {`I'm currently part of `}
-        <UrlLink href="https://cs.brown.edu/people/malte/">
-          Prof. Malte Schwarzkopf
-        </UrlLink>
-        {`'s `}
-        <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>
-        {`. `}
-        {`I will be joining the `}
+        {`Hello there! I'm Vic, a first-year Computer Science Ph.D. at
+        University of Washington. `}
+
+        {`I am a part of the `}
         <UrlLink href="https://syslab.cs.washington.edu/">
           UW Computer Systems Lab
         </UrlLink>
-        {` this fall, working with `}
+        {`, advised by `}
         <UrlLink href="https://homes.cs.washington.edu/~simpeter/">
           Prof. Simon Peter
         </UrlLink>
+        {`. `}
+
+        {`Before UW, I studied Finance and CS as an undergraduate at NYU, and `}
+        {`worked with `}
+        <UrlLink href="https://cs.brown.edu/people/malte/">
+          Prof. Malte Schwarzkopf
+        </UrlLink>
+        {` as a Master's student in `}
+        <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>
         {`.`}
       </p>
+
       <p className="text-justify">
-        {`I'm interested in making it easier to build distributed systems that are safe and fast.`}
+        <span>
+          {`These days, I'm thinking about how to design high-performing
+          systems to best serve emerging datacenter computing trends. `}
+        </span>
+        <span>
+          {`In my spare time, I enjoy taking photos, snowboarding, and a
+          healthy amount of metaprogramming :)`}
+        </span>
       </p>
-      <p className="text-justify">
-        {`In my spare time, I enjoy hiking, snowboarding, and a healthy amount of metaprogramming :)`}
-      </p>
+
+      <p className="text-justify"></p>
     </div>
   );
 };
