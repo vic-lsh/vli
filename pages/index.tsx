@@ -7,7 +7,7 @@ import { NavTab } from "../components/nav-tab";
 
 const GH_URL = "https://www.github.com/vic-shihang-li";
 
-const EMAIL_ADDR = "shli [at] cs.washington.edu";
+const EMAIL_ADDR = "shli [at] cs [dot] washington [dot] edu";
 
 const FEATURE_FLAGS = {
   enable_blogs: false,
@@ -105,28 +105,31 @@ const PersonalIntroArea = () => {
           Malte Schwarzkopf
         </UrlLink>
         {` and `}
-        <UrlLink href="https://www.abelay.me/">Adam Belay</UrlLink>
+        <UrlLink href="http://www.abelay.me/">Adam Belay</UrlLink>
         {` as a member of the `}
         <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>
         {` at Brown.`}
       </p>
-      <p>
-        {`I studied Finance and CS as an undergraduate at NYU Stern School of Business,
-        with a focus on high-performance quantitative trading.`}
-      </p>
-
       <p className="text-justify">
         <span>
           {`These days, I'm thinking about how to design high-performing
           systems to best serve emerging datacenter computing trends. `}
         </span>
         <span>
+          {`My latest work focus on improving datacenter resource utilization
+          with HW/SW co-design, resource disaggregation, and smart scheduling.`}
+        </span>
+        {/*
+        <span>
           {`In my spare time, I enjoy taking photos, snowboarding, and a
           healthy amount of metaprogramming :)`}
         </span>
+        */}
       </p>
-
-      <p className="text-justify"></p>
+      <p>
+        {`I studied Finance and CS as an undergraduate at NYU Stern School of Business,
+        with a focus on high-performance quantitative trading.`}
+      </p>
     </div>
   );
 };
