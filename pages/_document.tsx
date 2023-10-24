@@ -22,6 +22,9 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
+        <Head>
+          <link rel="icon" href="/favicon.png" />
+        </Head>
         <StyledBody>
           <Main />
           <NextScript />
