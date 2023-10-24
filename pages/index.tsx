@@ -212,16 +212,16 @@ const Fun = () => {
   const roadtripImages = [
     { src: "/imgs/bl.jpeg", alt: "Image 1" },
     { src: "/imgs/sql.jpeg", alt: "Image 2" },
-    { src: "/imgs/bs2.jpeg", alt: "Image 2" },
-    { src: "/imgs/gt.jpeg", alt: "Image 2" },
-    { src: "/imgs/st1.jpeg", alt: "Image 2" },
-    { src: "/imgs/bl2.jpeg", alt: "Image 2" },
+    { src: "/imgs/bs2.jpeg", alt: "Image 3" },
+    { src: "/imgs/gt.jpeg", alt: "Image 4" },
+    { src: "/imgs/st1.jpeg", alt: "Image 5" },
+    { src: "/imgs/bl2.jpeg", alt: "Image 6" },
   ];
 
   const mm35Images = [
     { src: "/imgs/g1.jpeg", alt: "Image 1" },
     { src: "/imgs/b1.jpeg", alt: "Image 2" },
-    { src: "/imgs/g2.jpeg", alt: "Image 2" },
+    { src: "/imgs/g2.jpeg", alt: "Image 3" },
   ];
 
   return (
@@ -236,16 +236,16 @@ const Fun = () => {
       </div>
 
       <p>
-        Below are some images I took on my cross-country roadtrip from New York
+        {`Below are some images I took on my cross-country roadtrip from New York
         to Seattle. These are not shot in 1:1 ratio -- someday I'll figure out
         how to write CSS for a responsive image grid with support for various
-        aspect ratios, someday...
+        aspect ratios, someday...`}
       </p>
       <ImageGrid images={roadtripImages} />
 
       <p className="pt-2">
-        Lately I have been shooting with prime lenses exclusively. Here're some
-        35mm shots:
+        {`Lately I have been shooting with prime lenses exclusively. Here're some
+        35mm shots:`}
       </p>
       <ImageGrid images={mm35Images} />
     </div>
