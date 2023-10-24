@@ -165,7 +165,7 @@ export default function Home() {
         ></meta>
       </Head>
 
-      <main className="h-screen md:py-20 px-5 max-w-5xl m-auto">
+      <main className="h-screen x-5 max-w-5xl m-auto">
         <NavBar>
           {FEATURE_FLAGS.enable_blogs && (
             <NavTab href="/blogs">
@@ -174,7 +174,7 @@ export default function Home() {
           )}
         </NavBar>
 
-        <div className="md:pt-0 flex flex-col md:justify-center items-center">
+        <div className="px-5 md:pt-0 flex flex-col md:justify-center items-center">
           <TitleArea />
           <div className="max-w-2xl flex flex-col gap-8">
             <PersonalIntroArea />
