@@ -160,6 +160,24 @@ const Publications = () => {
   );
 };
 
+const Teaching = () => {
+  return (
+    <div>
+      <h2 className="text-2xl">Teaching</h2>
+      <div className="py-3">
+        <p className="text-justify">
+          {`I find teaching to a deeply rewarding experience. I have TAed for the following courses:`}
+        </p>
+        <ul className="list-disc list-outside ml-3 py-2">
+          <li>CSCI 0300: Fundamentals of Computer Systems @ Brown</li>
+          <li>CSCI 1760: Multiprocessor Synchronization @ Brown</li>
+          <li>STAT-GB.2308.10: Stochastic Processes @ NYU</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
 export default function Home() {
   return (
     <div>
@@ -186,6 +204,7 @@ export default function Home() {
           <div className="max-w-2xl flex flex-col gap-8">
             <PersonalIntroArea />
             <Publications />
+            <Teaching />
           </div>
         </div>
         <div className="py-8">
