@@ -192,7 +192,8 @@ const Fun = () => {
       <SectionHeader>Fun</SectionHeader>
       <div className="py-3">
         <p>
-          {`In my spare time, I enjoy taking pictures, snowboarding, and a healthy amount of metaprogramming :)`}
+          {`In my spare time, I enjoy taking pictures, snowboarding,
+          mildly spirited backroad driving, and a healthy dose of metaprogramming :)`}
         </p>
       </div>
     </div>
