@@ -23,6 +23,14 @@ const UrlLink: React.FC<{ href: string }> = ({ children, href }) => (
   </a>
 );
 
+const SectionHeader: React.FC = ({ children }) => {
+  return (
+    <h2 className="text-2xl font-bold text-blue-800 dark:text-dark-accent">
+      {children}
+    </h2>
+  );
+};
+
 const NameHeader: React.FC = ({ children }) => {
   return (
     <h1 className="text-center text-4xl md:text-5xl lg:text-7xl text-blue-800 dark:text-dark-accent font-serif">
@@ -137,7 +145,7 @@ const PersonalIntroArea = () => {
 const Publications = () => {
   return (
     <div>
-      <h2 className="text-2xl">Publications</h2>
+      <SectionHeader>Publications</SectionHeader>
       <div>
         <div className="py-3">
           <div className="font-bold">
@@ -163,7 +171,7 @@ const Publications = () => {
 const Teaching = () => {
   return (
     <div>
-      <h2 className="text-2xl">Teaching</h2>
+      <SectionHeader>Teaching</SectionHeader>
       <div className="py-3">
         <p>
           {`I find teaching to a deeply rewarding experience. I have TAed for the following courses:`}
@@ -181,7 +189,7 @@ const Teaching = () => {
 const Fun = () => {
   return (
     <div>
-      <h2 className="text-2xl">Fun</h2>
+      <SectionHeader>Fun</SectionHeader>
       <div className="py-3">
         <p>
           {`In my spare time, I enjoy taking pictures, snowboarding, and a healthy amount of metaprogramming :)`}
