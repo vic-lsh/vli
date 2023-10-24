@@ -73,7 +73,7 @@ const ContactInfo = () => {
 };
 
 const TitleArea = () => (
-  <span className="m-10 flex flex-col md:flex-row md:items-center">
+  <span className="mx-10 my-2 flex flex-col md:flex-row md:items-center">
     <span className="m-10">
       <ProfilePic />
     </span>
@@ -88,7 +88,7 @@ const PersonalIntroArea = () => {
   return (
     <div className="flex flex-col gap-4">
       <p className="text-justify">
-        {`Hello there! I'm Vic, a first-year Computer Science Ph.D. at
+        {`Hello there! I'm Vic, a first-year Computer Science Ph.D. student at
         University of Washington. `}
 
         {`I am a part of the `}
@@ -97,18 +97,22 @@ const PersonalIntroArea = () => {
         </UrlLink>
         {`, advised by `}
         <UrlLink href="https://homes.cs.washington.edu/~simpeter/">
-          Prof. Simon Peter
+          Simon Peter
         </UrlLink>
         {`. `}
-
-        {`Before UW, I studied Finance and CS as an undergraduate at NYU, and `}
-        {`worked with `}
+        {`Before UW, I've had the pleasure of working with `}
         <UrlLink href="https://cs.brown.edu/people/malte/">
-          Prof. Malte Schwarzkopf
+          Malte Schwarzkopf
         </UrlLink>
-        {` as a Master's student in `}
+        {` and `}
+        <UrlLink href="https://www.abelay.me/">Adam Belay</UrlLink>
+        {` as a member of the `}
         <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>
-        {`.`}
+        {` at Brown.`}
+      </p>
+      <p>
+        {`I studied Finance and CS as an undergraduate at NYU Stern School of Business,
+        with a focus on high-performance quantitative trading.`}
       </p>
 
       <p className="text-justify">
