@@ -165,7 +165,7 @@ const Teaching = () => {
     <div>
       <h2 className="text-2xl">Teaching</h2>
       <div className="py-3">
-        <p className="text-justify">
+        <p>
           {`I find teaching to a deeply rewarding experience. I have TAed for the following courses:`}
         </p>
         <ul className="list-disc list-outside ml-3 py-2">
@@ -173,6 +173,19 @@ const Teaching = () => {
           <li>CSCI 1760: Multiprocessor Synchronization @ Brown</li>
           <li>STAT-GB.2308.10: Stochastic Processes @ NYU</li>
         </ul>
+      </div>
+    </div>
+  );
+};
+
+const Fun = () => {
+  return (
+    <div>
+      <h2 className="text-2xl">Fun</h2>
+      <div className="py-3">
+        <p>
+          {`In my spare time, I enjoy taking pictures, snowboarding, and a healthy amount of metaprogramming :)`}
+        </p>
       </div>
     </div>
   );
@@ -205,6 +218,7 @@ export default function Home() {
             <PersonalIntroArea />
             <Publications />
             <Teaching />
+            <Fun />
           </div>
         </div>
         <div className="py-8">
