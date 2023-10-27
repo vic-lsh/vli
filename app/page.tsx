@@ -6,6 +6,7 @@ import { NavTab } from "../components/nav-tab";
 import { Publication, PUBLICATIONS } from "../data/pubs";
 
 // image imports
+import ImageProfile from "../public/profile.jpg";
 import ImageBadLand1 from "../public/imgs/bl.jpeg";
 import ImageSquirrel from "../public/imgs/sql.jpeg";
 import ImageBison2 from "../public/imgs/bs2.jpeg";
@@ -57,10 +58,11 @@ const NameHeader: React.FC = ({ children }) => {
 const ProfilePic = () => (
   <div className="relative border-black border-solid border-4">
     <Image
-      src="/profile.jpg"
+      src={ImageProfile}
       alt="Vic's profile picture."
       width="200"
       height="200"
+      placeholder="blur"
     />
   </div>
 );
