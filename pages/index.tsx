@@ -158,7 +158,16 @@ const PublicationEntry: React.FC<{ pub: Publication }> = ({ pub }) => {
 
   return (
     <>
-      <div className="font-bold">{pub.title}</div>
+      {pub.url ? (
+        <a
+          href={pub.url}
+          className="font-bold hover:underline text-blue-600 dark:text-dark-accent"
+        >
+          {pub.title}
+        </a>
+      ) : (
+        <div className="font-bold">{pub.title}</div>
+      )}
       <div>{concatenatedAuthors}</div>
       <div className="italic">
         {pub.venue} (<UrlLink href={pub.venueLink}>{pub.venueAbbr}</UrlLink>)
