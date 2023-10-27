@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { LinkToNewTab } from "../components/link-new-tab";
@@ -22,7 +21,7 @@ const GH_URL = "https://www.github.com/vic-shihang-li";
 const EMAIL_ADDR = "shli [at] cs [dot] uw [dot] edu";
 
 const FEATURE_FLAGS = {
-  enable_blogs: true,
+  enable_blogs: false,
 };
 
 const ContactInfoContainer: React.FC = ({ children }) => (
