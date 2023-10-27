@@ -231,6 +231,7 @@ const ImageGrid: React.FC<{ images: ImageSpec[] }> = ({ images }) => {
           <Image
             src={image.src}
             alt={image.alt}
+            title={image.alt}
             layout="fill"
             objectFit="cover"
             placeholder="blur"
@@ -243,18 +244,24 @@ const ImageGrid: React.FC<{ images: ImageSpec[] }> = ({ images }) => {
 
 const Fun = () => {
   const roadtripImages = [
-    { src: ImageBadLand1, alt: "Image 1" },
-    { src: ImageSquirrel, alt: "Image 2" },
-    { src: ImageBison2, alt: "Image 3" },
-    { src: ImageGrandTeton, alt: "Image 4" },
-    { src: ImageStone, alt: "Image 5" },
-    { src: ImageBadLand2, alt: "Image 6" },
+    { src: ImageBadLand1, alt: "Dusk at Badlands National Park" },
+    { src: ImageSquirrel, alt: "A squirrel at Crater Lake National Park" },
+    {
+      src: ImageBison2,
+      alt: "A bison next to a van at Badlands National Park",
+    },
+    { src: ImageGrandTeton, alt: "Grand Teton National Park" },
+    {
+      src: ImageStone,
+      alt: "A hill of tavertine at Yellowstone National Park",
+    },
+    { src: ImageBadLand2, alt: "Dusk at Badlands National Park" },
   ];
 
   const mm35Images = [
-    { src: ImageGreenery1, alt: "Image 1" },
-    { src: ImageBike1, alt: "Image 2" },
-    { src: ImageGreenery2, alt: "Image 3" },
+    { src: ImageGreenery1, alt: "Mountain in fog at Rainier National Park" },
+    { src: ImageBike1, alt: "Some bikes in New York streets" },
+    { src: ImageGreenery2, alt: "A tree at Rainer National Park" },
   ];
 
   return (
