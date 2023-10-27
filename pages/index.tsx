@@ -43,6 +43,10 @@ const SectionHeader: React.FC = ({ children }) => {
   );
 };
 
+const SectionContent: React.FC = ({ children }) => {
+  return <div className="py-3">{children}</div>;
+};
+
 const NameHeader: React.FC = ({ children }) => {
   return (
     <h1 className="text-center text-4xl md:text-5xl lg:text-7xl text-blue-800 dark:text-dark-accent font-serif">
@@ -191,11 +195,11 @@ const Publications: React.FC<{ pubs: Publication[] }> = ({ pubs }) => {
   return (
     <div>
       <SectionHeader>Publications</SectionHeader>
-      <div className="py-3">
+      <SectionContent>
         {pubs.map((pub, index) => (
           <PublicationEntry key={index} pub={pub} />
         ))}
-      </div>
+      </SectionContent>
     </div>
   );
 };
@@ -204,7 +208,7 @@ const Teaching = () => {
   return (
     <div>
       <SectionHeader>Teaching</SectionHeader>
-      <div className="py-3">
+      <SectionContent>
         <p>
           {`I find teaching to a deeply rewarding experience. I have TAed for the following courses:`}
         </p>
@@ -213,7 +217,7 @@ const Teaching = () => {
           <li>CSCI 1760: Multiprocessor Synchronization @ Brown</li>
           <li>STAT-GB.2308.10: Stochastic Processes @ NYU</li>
         </ul>
-      </div>
+      </SectionContent>
     </div>
   );
 };
@@ -267,27 +271,28 @@ const Fun = () => {
   return (
     <div>
       <SectionHeader>Fun</SectionHeader>
-      <div className="py-3">
+      <SectionContent>
         <p>
           In my spare time, I enjoy taking <a href="photos">pictures</a>,
           {` snowboarding, `}
           {`mildly spirited backroad driving, and a healthy dose of metaprogramming :)`}
         </p>
-      </div>
 
-      <p>
-        {`Below are some images I took on my cross-country roadtrip from New York
+        <p className="py-2">
+          {/* hacky padding between paragraphs, will fix */}
+          {`Below are some images I took on my cross-country roadtrip from New York
         to Seattle. These are not shot in 1:1 ratio -- someday I'll figure out
         how to write CSS for a responsive image grid with support for various
         aspect ratios, someday...`}
-      </p>
-      <ImageGrid images={roadtripImages} />
+        </p>
+        <ImageGrid images={roadtripImages} />
 
-      <p className="pt-2">
-        {`Lately I have been shooting with prime lenses exclusively. Here're some
+        <p className="pt-2">
+          {`Lately I have been shooting with prime lenses exclusively. Here're some
         35mm shots:`}
-      </p>
-      <ImageGrid images={mm35Images} />
+        </p>
+        <ImageGrid images={mm35Images} />
+      </SectionContent>
     </div>
   );
 };
