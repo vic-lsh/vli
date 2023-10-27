@@ -161,7 +161,7 @@ const PublicationEntry: React.FC<{ pub: Publication }> = ({ pub }) => {
       {pub.url ? (
         <a
           href={pub.url}
-          className="font-bold hover:underline text-blue-600 dark:text-dark-accent"
+          className="font-bold underline text-blue-600 dark:text-dark-accent"
         >
           {pub.title}
         </a>
