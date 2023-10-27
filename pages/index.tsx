@@ -191,7 +191,7 @@ const Publications: React.FC<{ pubs: Publication[] }> = ({ pubs }) => {
   return (
     <div>
       <SectionHeader>Publications</SectionHeader>
-      <div>
+      <div className="py-3">
         {pubs.map((pub, index) => (
           <PublicationEntry key={index} pub={pub} />
         ))}
