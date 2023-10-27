@@ -1,10 +1,21 @@
 import Head from "next/head";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { LinkToNewTab } from "../components/link-new-tab";
 import { NavBar } from "../components/nav-bar";
 import { NavTab } from "../components/nav-tab";
 import { Publication, PUBLICATIONS } from "../data/pubs";
+
+// image imports
+import ImageBadLand1 from "../public/imgs/bl.jpeg";
+import ImageSquirrel from "../public/imgs/sql.jpeg";
+import ImageBison2 from "../public/imgs/bs2.jpeg";
+import ImageGrandTeton from "../public/imgs/gt.jpeg";
+import ImageStone from "../public/imgs/st1.jpeg";
+import ImageBadLand2 from "../public/imgs/bl2.jpeg";
+import ImageGreenery1 from "../public/imgs/g1.jpeg";
+import ImageBike1 from "../public/imgs/b1.jpeg";
+import ImageGreenery2 from "../public/imgs/g2.jpeg";
 
 const GH_URL = "https://www.github.com/vic-shihang-li";
 
@@ -208,7 +219,7 @@ const Teaching = () => {
 };
 
 interface ImageSpec {
-  src: string;
+  src: StaticImageData;
   alt: string;
 }
 
@@ -222,6 +233,7 @@ const ImageGrid: React.FC<{ images: ImageSpec[] }> = ({ images }) => {
             alt={image.alt}
             layout="fill"
             objectFit="cover"
+            placeholder="blur"
           />
         </div>
       ))}
@@ -231,18 +243,18 @@ const ImageGrid: React.FC<{ images: ImageSpec[] }> = ({ images }) => {
 
 const Fun = () => {
   const roadtripImages = [
-    { src: "/imgs/bl.jpeg", alt: "Image 1" },
-    { src: "/imgs/sql.jpeg", alt: "Image 2" },
-    { src: "/imgs/bs2.jpeg", alt: "Image 3" },
-    { src: "/imgs/gt.jpeg", alt: "Image 4" },
-    { src: "/imgs/st1.jpeg", alt: "Image 5" },
-    { src: "/imgs/bl2.jpeg", alt: "Image 6" },
+    { src: ImageBadLand1, alt: "Image 1" },
+    { src: ImageSquirrel, alt: "Image 2" },
+    { src: ImageBison2, alt: "Image 3" },
+    { src: ImageGrandTeton, alt: "Image 4" },
+    { src: ImageStone, alt: "Image 5" },
+    { src: ImageBadLand2, alt: "Image 6" },
   ];
 
   const mm35Images = [
-    { src: "/imgs/g1.jpeg", alt: "Image 1" },
-    { src: "/imgs/b1.jpeg", alt: "Image 2" },
-    { src: "/imgs/g2.jpeg", alt: "Image 3" },
+    { src: ImageGreenery1, alt: "Image 1" },
+    { src: ImageBike1, alt: "Image 2" },
+    { src: ImageGreenery2, alt: "Image 3" },
   ];
 
   return (
