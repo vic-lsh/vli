@@ -267,17 +267,15 @@ const Fun = () => {
       <SectionHeader>Fun</SectionHeader>
       <SectionContent>
         <p>
-          In my spare time, I enjoy taking <a href="photos">pictures</a>,
+          I enjoy taking pictures,
           {` snowboarding, `}
           {`mildly spirited backroad driving, and a healthy dose of metaprogramming :)`}
         </p>
 
         <p className="py-2">
           {/* hacky padding between paragraphs, will fix */}
-          {`Below are some images I took on my cross-country roadtrip from New York
-        to Seattle. These are not shot in 1:1 ratio -- someday I'll figure out
-        how to write CSS for a responsive image grid with support for various
-        aspect ratios, someday...`}
+          {`Below are some photos I took on my cross-country roadtrip from New York
+        to Seattle in the summer of 2023.`}
         </p>
         <ImageGrid images={roadtripImages} />
 
