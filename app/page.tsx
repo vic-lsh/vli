@@ -204,7 +204,7 @@ const Teaching = () => {
       <SectionHeader>Teaching</SectionHeader>
       <SectionContent>
         <p>
-          {`I find teaching to a deeply rewarding experience. I have TAed for the following courses:`}
+          {`I find teaching to be deeply rewarding. I have TAed for the following courses:`}
         </p>
         <ul className="list-disc list-outside ml-3 py-2">
           <li>CSCI 0300: Fundamentals of Computer Systems @ Brown</li>
