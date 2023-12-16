@@ -17,7 +17,7 @@ import ImageGreenery1 from "../public/imgs/g1.jpeg";
 import ImageBike1 from "../public/imgs/b1.jpeg";
 import ImageGreenery2 from "../public/imgs/g2.jpeg";
 
-const GH_URL = "https://www.github.com/vic-shihang-li";
+const GH_URL = "https://www.github.com/vicshli";
 
 const EMAIL_ADDR = "shli [at] cs [dot] uw [dot] edu";
 
@@ -79,7 +79,7 @@ const ContactInfo = () => {
             height="20"
             className="dark:invert-90"
           />
-          <span className="underline">vic-shihang-li</span>
+          <span className="underline">vicshli</span>
         </ContactInfoContainer>
       </LinkToNewTab>
 
@@ -114,18 +114,18 @@ const PersonalIntroArea = () => {
     <div className="flex flex-col gap-4">
       <p>
         {`Hello there! I'm Vic, a first-year Computer Science Ph.D. student at
-        University of Washington. `}
+        the University of Washington. `}
 
-        {`I am a part of the `}
-        <UrlLink href="https://syslab.cs.washington.edu/">
-          UW Computer Systems Lab
-        </UrlLink>
-        {`, advised by `}
+        {`I am advised by `}
         <UrlLink href="https://homes.cs.washington.edu/~simpeter/">
           Simon Peter
         </UrlLink>
+        {` of the `}
+        <UrlLink href="https://syslab.cs.washington.edu/">
+          UW Computer Systems Lab
+        </UrlLink>
         {`. `}
-        {`Before UW, I've had the pleasure of working with `}
+        {`Before UW, I worked with `}
         <UrlLink href="https://cs.brown.edu/people/malte/">
           Malte Schwarzkopf
         </UrlLink>
@@ -137,19 +137,12 @@ const PersonalIntroArea = () => {
       </p>
       <p>
         <span>
-          {`These days, I'm thinking about how to design high-performing
-          systems to best serve emerging datacenter computing trends. `}
+          {`I design systems for emerging datacenter computing trends. `}
         </span>
         <span>
-          {`My latest work focuses on improving datacenter resource utilization
-          with HW/SW co-design, resource disaggregation, and smart scheduling.`}
+          {`My latest work improves datacenter resource utilization
+          with HW/SW co-design, resource pooling, and scheduling.`}
         </span>
-        {/*
-        <span>
-          {`In my spare time, I enjoy taking photos, snowboarding, and a
-          healthy amount of metaprogramming :)`}
-        </span>
-        */}
       </p>
       <p>
         {`I studied Finance and CS as an undergraduate at NYU Stern School of Business,
