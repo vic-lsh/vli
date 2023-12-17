@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/legacy/image";
 import React from "react";
 import { LinkToNewTab } from "../components/link-new-tab";
 import { NavBar } from "../components/nav-bar";
@@ -56,7 +56,11 @@ const NameHeader: React.FC = ({ children }) => {
 };
 
 const ProfilePic = () => (
-  <div className="relative border-black border-solid border-4">
+  <div
+    className="relative border-black border-solid border-4"
+    // hack: remove unwanted white space below profile picture
+    style={{ height: "208px" }}
+  >
     <Image
       src={ImageProfile}
       alt="Vic's profile picture."
