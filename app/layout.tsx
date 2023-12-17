@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { StyledBody } from "../components/styled-body";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Shihang (Vic) Li",
@@ -37,8 +38,9 @@ export default function RootLayout({
 
       <StyledBody>{children}</StyledBody>
 
-      {/* Configure Vercel Analytics */}
+      {/* Configure Vercel telemetry */}
       <Analytics />
+      <SpeedInsights />
     </html>
   );
 }
