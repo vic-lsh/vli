@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useMemo } from "react";
-import { Post } from "../libs/posts";
+import { Post } from "../../libs/posts";
 
 interface Props {
   post: Post;
