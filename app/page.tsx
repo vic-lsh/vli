@@ -305,7 +305,7 @@ export default function Home() {
           )}
         </NavBar>
 
-        <div className="px-5 md:pt-0 flex flex-col md:justify-center items-center">
+        <div className="px-5 pb-8 md:pt-0 flex flex-col md:justify-center items-center">
           <TitleArea />
           <div className="max-w-2xl flex flex-col gap-8">
             <PersonalIntroArea />
@@ -313,9 +313,6 @@ export default function Home() {
             <Teaching />
             <Fun />
           </div>
-        </div>
-        <div className="py-8">
-          {/* hacky way to add padding at the bottom */}
         </div>
       </main>
     </div>
