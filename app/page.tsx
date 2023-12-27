@@ -295,26 +295,24 @@ const Fun = () => {
 
 export default function Home() {
   return (
-    <div>
-      <main className="h-screen x-5 max-w-5xl m-auto">
-        <NavBar>
-          {FEATURE_FLAGS.enable_blogs && (
-            <NavTab href="/blogs">
-              <span data-cy="blogs-link">Blogs</span>
-            </NavTab>
-          )}
-        </NavBar>
+    <main className="h-screen x-5 max-w-5xl m-auto">
+      <NavBar>
+        {FEATURE_FLAGS.enable_blogs && (
+          <NavTab href="/blogs">
+            <span data-cy="blogs-link">Blogs</span>
+          </NavTab>
+        )}
+      </NavBar>
 
-        <div className="px-5 pb-8 md:pt-0 flex flex-col md:justify-center items-center">
-          <TitleArea />
-          <div className="max-w-2xl flex flex-col gap-8">
-            <PersonalIntroArea />
-            <Publications pubs={PUBLICATIONS} />
-            <Teaching />
-            <Fun />
-          </div>
+      <div className="px-5 pb-8 md:pt-0 flex flex-col md:justify-center items-center">
+        <TitleArea />
+        <div className="max-w-2xl flex flex-col gap-8">
+          <PersonalIntroArea />
+          <Publications pubs={PUBLICATIONS} />
+          <Teaching />
+          <Fun />
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
