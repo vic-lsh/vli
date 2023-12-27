@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/legacy/image";
 import React from "react";
-import { LinkToNewTab } from "../components/link-new-tab";
-import { NavBar } from "../components/nav-bar";
-import { NavTab } from "../components/nav-tab";
+import { LinkToNewTab } from "../components/ui/link-new-tab";
+import { NavBar } from "../components/ui/nav-bar";
+import { NavTab } from "../components/ui/nav-tab";
 import { Publication, PUBLICATIONS } from "../data/pubs";
 
 // image imports
