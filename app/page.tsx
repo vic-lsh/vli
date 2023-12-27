@@ -16,7 +16,7 @@ import ImageBadLand2 from "../public/imgs/bl2.jpeg";
 import ImageGreenery1 from "../public/imgs/g1.jpeg";
 import ImageBike1 from "../public/imgs/b1.jpeg";
 import ImageGreenery2 from "../public/imgs/g2.jpeg";
-import { TEACHING, TeachingInfo } from "../data/teaching";
+import { TEACHING, TeachingInfo, Course } from "../data/teaching";
 
 const GH_URL = "https://www.github.com/vicshli";
 
@@ -203,6 +203,16 @@ const Publications: React.FC<{ pubs: Publication[] }> = ({ pubs }) => {
   );
 };
 
+const CourseEntry: React.FC<{ course: Course }> = ({ course }) => {
+  const courseDesc = `${course.id}: ${course.name} @ ${course.school}`;
+
+  return course.url ? (
+    <UrlLink href={course.url}>{courseDesc}</UrlLink>
+  ) : (
+    <span>{courseDesc}</span>
+  );
+};
+
 const Teaching: React.FC<{ info: TeachingInfo }> = ({ info }) => {
   return (
     <div>
@@ -212,7 +222,7 @@ const Teaching: React.FC<{ info: TeachingInfo }> = ({ info }) => {
         <ul className="list-disc list-outside ml-3 py-2">
           {info.courses.map((course, index) => (
             <li key={index}>
-              {course.id}: {course.name} @ {course.school}
+              <CourseEntry course={course} />
             </li>
           ))}
         </ul>
