@@ -9,7 +9,10 @@ const ContactInfoContainer: React.FC = ({ children }) => (
 
 const NameHeader: React.FC = ({ children }) => {
   return (
-    <h1 className="text-center text-4xl md:text-5xl lg:text-7xl text-blue-800 dark:text-dark-accent font-bold lg:font-normal font-serif">
+    <h1
+      style={{ fontFamily: "Playfair display" }}
+      className="text-center text-4xl sm:text-5xl md:text-5xl lg:text-7xl text-blue-800 dark:text-dark-accent font-bold lg:font-normal"
+    >
       {children}
     </h1>
   );

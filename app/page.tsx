@@ -18,7 +18,7 @@ const FEATURE_FLAGS = {
 
 export default function Home() {
   return (
-    <main className="h-screen x-5 max-w-5xl m-auto">
+    <main className="h-screen x-5 max-w-6xl m-auto">
       <NavBar>
         {FEATURE_FLAGS.enable_blogs && (
           <NavTab href="/blogs">
