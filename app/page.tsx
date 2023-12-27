@@ -1,21 +1,14 @@
-import Image, { StaticImageData } from "next/legacy/image";
+import Image from "next/legacy/image";
 import React from "react";
 import { LinkToNewTab } from "../components/ui/link-new-tab";
 import { NavBar } from "../components/ui/nav-bar";
 import { NavTab } from "../components/ui/nav-tab";
 import { Publication, PUBLICATIONS } from "../data/pubs";
+import { Fun } from "../components/fun";
+import { SectionHeader, SectionContent } from "../components/ui/home";
 
-// image imports
 import ImageProfile from "../public/profile.jpg";
-import ImageBadLand1 from "../public/imgs/bl.jpeg";
-import ImageSquirrel from "../public/imgs/sql.jpeg";
-import ImageBison2 from "../public/imgs/bs2.jpeg";
-import ImageGrandTeton from "../public/imgs/gt.jpeg";
-import ImageStone from "../public/imgs/st1.jpeg";
-import ImageBadLand2 from "../public/imgs/bl2.jpeg";
-import ImageGreenery1 from "../public/imgs/g1.jpeg";
-import ImageBike1 from "../public/imgs/b1.jpeg";
-import ImageGreenery2 from "../public/imgs/g2.jpeg";
+
 import { TEACHING, TeachingInfo, Course } from "../data/teaching";
 
 const GH_URL = "https://www.github.com/vicshli";
@@ -35,18 +28,6 @@ const UrlLink: React.FC<{ href: string }> = ({ children, href }) => (
     {children}
   </a>
 );
-
-const SectionHeader: React.FC = ({ children }) => {
-  return (
-    <h2 className="text-2xl lg:text-3xl font-bold text-blue-800 dark:text-dark-accent border-solid border-b-2 border-blue-800 dark:border-dark-accent font-serif">
-      {children}
-    </h2>
-  );
-};
-
-const SectionContent: React.FC = ({ children }) => {
-  return <div className="py-3">{children}</div>;
-};
 
 const NameHeader: React.FC = ({ children }) => {
   return (
@@ -226,79 +207,6 @@ const Teaching: React.FC<{ info: TeachingInfo }> = ({ info }) => {
             </li>
           ))}
         </ul>
-      </SectionContent>
-    </div>
-  );
-};
-
-interface ImageSpec {
-  src: StaticImageData;
-  alt: string;
-}
-
-const ImageGrid: React.FC<{ images: ImageSpec[] }> = ({ images }) => {
-  return (
-    <div className="grid grid-cols-3 gap-4 py-4">
-      {images.map((image, index) => (
-        <div key={index} className="relative h-0 pb-[100%]">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            title={image.alt}
-            layout="fill"
-            objectFit="cover"
-            placeholder="blur"
-          />
-        </div>
-      ))}
-    </div>
-  );
-};
-
-const Fun = () => {
-  const roadtripImages = [
-    { src: ImageBadLand1, alt: "Dusk at Badlands National Park" },
-    { src: ImageSquirrel, alt: "A squirrel at Crater Lake National Park" },
-    {
-      src: ImageBison2,
-      alt: "A bison next to a van at Badlands National Park",
-    },
-    { src: ImageGrandTeton, alt: "Grand Teton National Park" },
-    {
-      src: ImageStone,
-      alt: "A hill of tavertine at Yellowstone National Park",
-    },
-    { src: ImageBadLand2, alt: "Dusk at Badlands National Park" },
-  ];
-
-  const mm35Images = [
-    { src: ImageGreenery1, alt: "Mountain in fog at Rainier National Park" },
-    { src: ImageBike1, alt: "Some bikes in New York streets" },
-    { src: ImageGreenery2, alt: "A tree at Rainer National Park" },
-  ];
-
-  return (
-    <div>
-      <SectionHeader>Fun</SectionHeader>
-      <SectionContent>
-        <p>
-          I enjoy taking pictures,
-          {` snowboarding, `}
-          {`mildly spirited backroad driving, and a healthy dose of metaprogramming :)`}
-        </p>
-
-        <p className="py-2">
-          {/* hacky padding between paragraphs, will fix */}
-          {`Below are some photos I took on my cross-country roadtrip from New York
-        to Seattle in the summer of 2023.`}
-        </p>
-        <ImageGrid images={roadtripImages} />
-
-        <p className="pt-2">
-          {`Lately I have been shooting with prime lenses exclusively. Here're some
-        35mm shots:`}
-        </p>
-        <ImageGrid images={mm35Images} />
       </SectionContent>
     </div>
   );
