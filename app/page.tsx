@@ -38,7 +38,7 @@ const UrlLink: React.FC<{ href: string }> = ({ children, href }) => (
 
 const SectionHeader: React.FC = ({ children }) => {
   return (
-    <h2 className="text-2xl font-bold text-blue-800 dark:text-dark-accent">
+    <h2 className="text-2xl lg:text-3xl font-bold text-blue-800 dark:text-dark-accent border-solid border-b-2 border-blue-800 dark:border-dark-accent font-serif">
       {children}
     </h2>
   );
@@ -50,7 +50,7 @@ const SectionContent: React.FC = ({ children }) => {
 
 const NameHeader: React.FC = ({ children }) => {
   return (
-    <h1 className="text-center text-4xl md:text-5xl lg:text-7xl text-blue-800 dark:text-dark-accent font-serif">
+    <h1 className="text-center text-4xl md:text-5xl lg:text-7xl text-blue-800 dark:text-dark-accent font-bold lg:font-normal font-serif">
       {children}
     </h1>
   );
@@ -84,7 +84,7 @@ const ContactInfo = () => {
             height="20"
             className="dark:invert-90"
           />
-          <span className="underline">vicshli</span>
+          <span className="underline font-mono">vicshli</span>
         </ContactInfoContainer>
       </LinkToNewTab>
 
@@ -96,7 +96,7 @@ const ContactInfo = () => {
           height="16"
           className="dark:invert-90"
         />
-        <span className="underline">{EMAIL_ADDR}</span>
+        <span className="underline font-mono">{EMAIL_ADDR}</span>
       </ContactInfoContainer>
     </div>
   );
@@ -315,7 +315,7 @@ export default function Home() {
         )}
       </NavBar>
 
-      <div className="px-5 pb-8 md:pt-0 flex flex-col md:justify-center items-center">
+      <div className="px-5 pb-8 md:pt-0 flex flex-col md:justify-center items-center text-gray-700 dark:text-gray-300">
         <TitleArea />
         <div className="max-w-2xl flex flex-col gap-8">
           <PersonalIntroArea />
