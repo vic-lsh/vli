@@ -36,11 +36,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" />
       </head>
 
-      <StyledBody>{children}</StyledBody>
-
       {/* Configure Vercel telemetry */}
       <Analytics />
       <SpeedInsights />
+
+      <StyledBody>{children}</StyledBody>
     </html>
   );
 }
