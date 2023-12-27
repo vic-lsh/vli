@@ -60,7 +60,7 @@ const ProfilePic = () => (
   <div
     className="relative border-black border-solid border-4"
     // hack: remove unwanted white space below profile picture
-    style={{ height: "208px" }}
+    style={{ height: "208px", width: "208px" }}
   >
     <Image
       src={ImageProfile}
@@ -104,7 +104,7 @@ const ContactInfo = () => {
 
 const TitleArea = () => (
   <span className="mx-10 my-2 flex flex-col md:flex-row md:items-center">
-    <span className="m-10">
+    <span className="m-10 flex justify-center">
       <ProfilePic />
     </span>
     <span className="flex flex-col items-center md:items-start gap-2 md:gap-6">
