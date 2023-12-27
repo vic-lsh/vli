@@ -3,8 +3,8 @@ import React from "react";
 import { LinkToNewTab } from "../components/ui/link-new-tab";
 import { NavBar } from "../components/ui/nav-bar";
 import { NavTab } from "../components/ui/nav-tab";
-import { Publication, PUBLICATIONS } from "../data/pubs";
-import { SectionHeader, SectionContent } from "../components/ui/home";
+import { PUBLICATIONS } from "../data/pubs";
+import { Publications } from "../components/publications";
 import { UrlLink } from "../components/ui/url-link";
 
 import { Fun } from "../components/fun";
@@ -132,52 +132,6 @@ const PersonalIntroArea = () => {
   );
 };
 
-const PublicationEntry: React.FC<{ pub: Publication }> = ({ pub }) => {
-  const selfName = CONTACT.academicName ?? CONTACT.titleName;
-
-  const formattedName = pub.authors.map((name, index) =>
-    name === selfName ? <strong key={index}>{name}</strong> : name,
-  );
-  const concatenatedAuthors = formattedName.map((name, index) => (
-    <span key={index}>
-      {name}
-      {index === formattedName.length - 1 ? "" : ", "}
-    </span>
-  ));
-
-  return (
-    <>
-      {pub.url ? (
-        <a
-          href={pub.url}
-          className="font-bold underline text-blue-600 dark:text-dark-accent"
-        >
-          {pub.title}
-        </a>
-      ) : (
-        <div className="font-bold">{pub.title}</div>
-      )}
-      <div className="text-sm">{concatenatedAuthors}</div>
-      <div className="text-sm italic">
-        {pub.venue} (<UrlLink href={pub.venueLink}>{pub.venueAbbr}</UrlLink>)
-      </div>
-    </>
-  );
-};
-
-const Publications: React.FC<{ pubs: Publication[] }> = ({ pubs }) => {
-  return (
-    <div>
-      <SectionHeader>Publications</SectionHeader>
-      <SectionContent>
-        {pubs.map((pub, index) => (
-          <PublicationEntry key={index} pub={pub} />
-        ))}
-      </SectionContent>
-    </div>
-  );
-};
-
 export default function Home() {
   return (
     <main className="h-screen x-5 max-w-5xl m-auto">
@@ -193,7 +147,10 @@ export default function Home() {
         <TitleArea />
         <div className="max-w-2xl flex flex-col gap-8">
           <PersonalIntroArea />
-          <Publications pubs={PUBLICATIONS} />
+          <Publications
+            pubs={PUBLICATIONS}
+            selfName={CONTACT.academicName ?? CONTACT.titleName}
+          />
           <Teaching info={TEACHING} />
           <Fun />
         </div>
