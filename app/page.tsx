@@ -7,13 +7,8 @@ import { Publication, PUBLICATIONS } from "../data/pubs";
 import { Fun } from "../components/fun";
 import { SectionHeader, SectionContent } from "../components/ui/home";
 
-import ImageProfile from "../public/profile.jpg";
-
 import { TEACHING, TeachingInfo, Course } from "../data/teaching";
-
-const GH_URL = "https://www.github.com/vicshli";
-
-const EMAIL_ADDR = "shli [at] cs [dot] uw [dot] edu";
+import { CONTACT } from "../data/contact";
 
 const FEATURE_FLAGS = {
   enable_blogs: false,
@@ -44,8 +39,8 @@ const ProfilePic = () => (
     style={{ height: "208px", width: "208px" }}
   >
     <Image
-      src={ImageProfile}
-      alt="Vic's profile picture."
+      src={CONTACT.profilePic}
+      alt={`${CONTACT.titleName}'s profile picture.`}
       width="200"
       height="200"
       placeholder="blur"
@@ -56,7 +51,7 @@ const ProfilePic = () => (
 const ContactInfo = () => {
   return (
     <div className="m-2 gap-1 flex flex-col justify-center items-start">
-      <LinkToNewTab href={GH_URL}>
+      <LinkToNewTab href={`https://www.github.com/${CONTACT.githubUsername}`}>
         <ContactInfoContainer>
           <Image
             src="/github-logo.svg"
@@ -65,7 +60,9 @@ const ContactInfo = () => {
             height="20"
             className="dark:invert-90"
           />
-          <span className="underline font-mono text-sm">vicshli</span>
+          <span className="underline font-mono text-sm">
+            {CONTACT.githubUsername}
+          </span>
         </ContactInfoContainer>
       </LinkToNewTab>
 
@@ -77,7 +74,7 @@ const ContactInfo = () => {
           height="16"
           className="dark:invert-90"
         />
-        <span className="underline font-mono text-sm">{EMAIL_ADDR}</span>
+        <span className="underline font-mono text-sm">{CONTACT.email}</span>
       </ContactInfoContainer>
     </div>
   );
@@ -89,7 +86,7 @@ const TitleArea = () => (
       <ProfilePic />
     </span>
     <span className="flex flex-col items-center md:items-start gap-2 md:gap-6">
-      <NameHeader>Shihang (Vic) Li</NameHeader>
+      <NameHeader>{CONTACT.titleName}</NameHeader>
       <ContactInfo />
     </span>
   </span>
@@ -139,7 +136,7 @@ const PersonalIntroArea = () => {
 };
 
 const PublicationEntry: React.FC<{ pub: Publication }> = ({ pub }) => {
-  const selfName = "Shihang Li";
+  const selfName = CONTACT.academicName ?? CONTACT.titleName;
 
   const formattedName = pub.authors.map((name, index) =>
     name === selfName ? <strong key={index}>{name}</strong> : name,
