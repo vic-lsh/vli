@@ -4,10 +4,13 @@ import { LinkToNewTab } from "../components/ui/link-new-tab";
 import { NavBar } from "../components/ui/nav-bar";
 import { NavTab } from "../components/ui/nav-tab";
 import { Publication, PUBLICATIONS } from "../data/pubs";
-import { Fun } from "../components/fun";
 import { SectionHeader, SectionContent } from "../components/ui/home";
+import { UrlLink } from "../components/ui/url-link";
 
-import { TEACHING, TeachingInfo, Course } from "../data/teaching";
+import { Fun } from "../components/fun";
+import { Teaching } from "../components/teaching";
+
+import { TEACHING } from "../data/teaching";
 import { CONTACT } from "../data/contact";
 
 const FEATURE_FLAGS = {
@@ -16,12 +19,6 @@ const FEATURE_FLAGS = {
 
 const ContactInfoContainer: React.FC = ({ children }) => (
   <span className="flex items-center justify-center gap-2">{children}</span>
-);
-
-const UrlLink: React.FC<{ href: string }> = ({ children, href }) => (
-  <a className="underline" href={href}>
-    {children}
-  </a>
 );
 
 const NameHeader: React.FC = ({ children }) => {
@@ -176,34 +173,6 @@ const Publications: React.FC<{ pubs: Publication[] }> = ({ pubs }) => {
         {pubs.map((pub, index) => (
           <PublicationEntry key={index} pub={pub} />
         ))}
-      </SectionContent>
-    </div>
-  );
-};
-
-const CourseEntry: React.FC<{ course: Course }> = ({ course }) => {
-  const courseDesc = `${course.id}: ${course.name} @ ${course.school}`;
-
-  return course.url ? (
-    <UrlLink href={course.url}>{courseDesc}</UrlLink>
-  ) : (
-    <span>{courseDesc}</span>
-  );
-};
-
-const Teaching: React.FC<{ info: TeachingInfo }> = ({ info }) => {
-  return (
-    <div>
-      <SectionHeader>Teaching</SectionHeader>
-      <SectionContent>
-        <p>{info.brief}</p>
-        <ul className="list-disc list-outside ml-3 py-2">
-          {info.courses.map((course, index) => (
-            <li key={index}>
-              <CourseEntry course={course} />
-            </li>
-          ))}
-        </ul>
       </SectionContent>
     </div>
   );
