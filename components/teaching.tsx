@@ -1,6 +1,6 @@
 import { TeachingInfo, Course } from "../data/teaching";
 import { UrlLink } from "./ui/url-link";
-import { SectionHeader, SectionContent } from "./ui/home";
+import { SectionHeader, SectionContent, SectionContainer } from "./ui/home";
 
 const CourseEntry: React.FC<{ course: Course }> = ({ course }) => {
   const courseDesc = `${course.id}: ${course.name} @ ${course.school}`;
@@ -14,7 +14,7 @@ const CourseEntry: React.FC<{ course: Course }> = ({ course }) => {
 
 export const Teaching: React.FC<{ info: TeachingInfo }> = ({ info }) => {
   return (
-    <div>
+    <SectionContainer>
       <SectionHeader>Teaching</SectionHeader>
       <SectionContent>
         <p>{info.brief}</p>
@@ -26,6 +26,6 @@ export const Teaching: React.FC<{ info: TeachingInfo }> = ({ info }) => {
           ))}
         </ul>
       </SectionContent>
-    </div>
+    </SectionContainer>
   );
 };

@@ -8,7 +8,7 @@ import ImageGreenery1 from "../public/imgs/g1.jpeg";
 import ImageBike1 from "../public/imgs/b1.jpeg";
 import ImageGreenery2 from "../public/imgs/g2.jpeg";
 
-import { SectionHeader, SectionContent } from "./ui/home";
+import { SectionHeader, SectionContent, SectionContainer } from "./ui/home";
 import { ImageGrid } from "./ui/image-grid";
 
 export const Fun = () => {
@@ -34,7 +34,7 @@ export const Fun = () => {
   ];
 
   return (
-    <div>
+    <SectionContainer>
       <SectionHeader>Fun</SectionHeader>
       <SectionContent>
         <p>
@@ -56,6 +56,6 @@ export const Fun = () => {
         </p>
         <ImageGrid images={mm35Images} />
       </SectionContent>
-    </div>
+    </SectionContainer>
   );
 };

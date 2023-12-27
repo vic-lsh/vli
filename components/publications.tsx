@@ -1,4 +1,4 @@
-import { SectionHeader, SectionContent } from "./ui/home";
+import { SectionHeader, SectionContent, SectionContainer } from "./ui/home";
 import { Publication } from "../data/pubs";
 import { UrlLink } from "./ui/url-link";
 
@@ -41,13 +41,13 @@ export const Publications: React.FC<{
   selfName?: string;
 }> = ({ pubs, selfName }) => {
   return (
-    <div>
+    <SectionContainer>
       <SectionHeader>Publications</SectionHeader>
       <SectionContent>
         {pubs.map((pub, index) => (
           <PublicationEntry key={index} pub={pub} selfName={selfName} />
         ))}
       </SectionContent>
-    </div>
+    </SectionContainer>
   );
 };
