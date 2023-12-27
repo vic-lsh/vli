@@ -1,6 +1,6 @@
 export const SectionHeader: React.FC = ({ children }) => {
   return (
-    <h2 className="text-2xl lg:text-3xl font-bold text-blue-800 dark:text-dark-accent border-solid border-b-2 border-blue-800 dark:border-dark-accent font-serif">
+    <h2 className="text-2xl font-semibold text-blue-800 dark:text-dark-accent border-solid border-b-2 border-blue-800 dark:border-dark-accent font-mono">
       {children}
     </h2>
   );
