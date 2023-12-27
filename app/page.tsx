@@ -16,6 +16,7 @@ import ImageBadLand2 from "../public/imgs/bl2.jpeg";
 import ImageGreenery1 from "../public/imgs/g1.jpeg";
 import ImageBike1 from "../public/imgs/b1.jpeg";
 import ImageGreenery2 from "../public/imgs/g2.jpeg";
+import { TEACHING, TeachingInfo } from "../data/teaching";
 
 const GH_URL = "https://www.github.com/vicshli";
 
@@ -202,18 +203,18 @@ const Publications: React.FC<{ pubs: Publication[] }> = ({ pubs }) => {
   );
 };
 
-const Teaching = () => {
+const Teaching: React.FC<{ info: TeachingInfo }> = ({ info }) => {
   return (
     <div>
       <SectionHeader>Teaching</SectionHeader>
       <SectionContent>
-        <p>
-          {`I find teaching to be deeply rewarding. I have TAed for the following courses:`}
-        </p>
+        <p>{info.brief}</p>
         <ul className="list-disc list-outside ml-3 py-2">
-          <li>CSCI 0300: Fundamentals of Computer Systems @ Brown</li>
-          <li>CSCI 1760: Multiprocessor Synchronization @ Brown</li>
-          <li>STAT-GB.2308.10: Stochastic Processes @ NYU</li>
+          {info.courses.map((course, index) => (
+            <li key={index}>
+              {course.id}: {course.name} @ {course.school}
+            </li>
+          ))}
         </ul>
       </SectionContent>
     </div>
@@ -309,7 +310,7 @@ export default function Home() {
         <div className="max-w-2xl flex flex-col gap-8">
           <PersonalIntroArea />
           <Publications pubs={PUBLICATIONS} />
-          <Teaching />
+          <Teaching info={TEACHING} />
           <Fun />
         </div>
       </div>
