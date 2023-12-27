@@ -84,7 +84,7 @@ const ContactInfo = () => {
             height="20"
             className="dark:invert-90"
           />
-          <span className="underline font-mono">vicshli</span>
+          <span className="underline font-mono text-sm">vicshli</span>
         </ContactInfoContainer>
       </LinkToNewTab>
 
@@ -96,7 +96,7 @@ const ContactInfo = () => {
           height="16"
           className="dark:invert-90"
         />
-        <span className="underline font-mono">{EMAIL_ADDR}</span>
+        <span className="underline font-mono text-sm">{EMAIL_ADDR}</span>
       </ContactInfoContainer>
     </div>
   );
@@ -182,8 +182,8 @@ const PublicationEntry: React.FC<{ pub: Publication }> = ({ pub }) => {
       ) : (
         <div className="font-bold">{pub.title}</div>
       )}
-      <div>{concatenatedAuthors}</div>
-      <div className="italic">
+      <div className="text-sm">{concatenatedAuthors}</div>
+      <div className="text-sm italic">
         {pub.venue} (<UrlLink href={pub.venueLink}>{pub.venueAbbr}</UrlLink>)
       </div>
     </>
@@ -315,7 +315,7 @@ export default function Home() {
         )}
       </NavBar>
 
-      <div className="px-5 pb-8 md:pt-0 flex flex-col md:justify-center items-center text-gray-700 dark:text-gray-300">
+      <div className="px-5 pb-8 md:pt-0 flex flex-col gap-2 md:justify-center items-center text-gray-700 dark:text-gray-300">
         <TitleArea />
         <div className="max-w-2xl flex flex-col gap-8">
           <PersonalIntroArea />
