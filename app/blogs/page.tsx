@@ -1,7 +1,7 @@
 import { Post, readPosts } from "../../libs/posts";
-import { PostPreview } from "../../components/post-preview";
-import { PostLayout } from "../../components/post-layout";
-import { SubrouteHeading } from "../../components/subroute-heading";
+import { PostPreview } from "../../components/ui/post-preview";
+import { PostLayout } from "../../components/ui/post-layout";
+import { SubrouteHeading } from "../../components/ui/subroute-heading";
 
 const BlogPreviews: React.FC<{ posts: Post[] }> = ({ posts }) => {
   const NO_POSTS_MSG = "Oops, there's no blog post yet.";

@@ -1,6 +1,6 @@
 import React from "react";
-import { PostContent } from "../../../components/post-content";
-import { PostLayout } from "../../../components/post-layout";
+import { PostContent } from "../../../components/ui/post-content";
+import { PostLayout } from "../../../components/ui/post-layout";
 import { getPostBySlug, readPosts } from "../../../libs/posts";
 
 export default async function BlogPost({ params }) {
