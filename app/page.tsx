@@ -27,9 +27,9 @@ export default function Home() {
         )}
       </NavBar>
 
-      <div className="px-5 pb-8 md:pt-0 flex flex-col gap-2 md:justify-center items-center text-gray-700 dark:text-gray-300">
+      <div className="px-5 pb-8 md:pt-0 flex flex-col md:justify-center items-center text-gray-700 dark:text-gray-300">
         <HeroArea contact={CONTACT} />
-        <div className="max-w-2xl flex flex-col gap-8">
+        <div className="max-w-2xl flex flex-col mt-2 gap-8">
           <Intro />
           <Publications
             pubs={PUBLICATIONS}
