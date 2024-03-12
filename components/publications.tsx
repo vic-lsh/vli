@@ -17,7 +17,7 @@ const PublicationEntry: React.FC<{ pub: Publication; selfName?: string }> = ({
   ));
 
   return (
-    <>
+    <span>
       {pub.url ? (
         <a
           href={pub.url}
@@ -30,9 +30,12 @@ const PublicationEntry: React.FC<{ pub: Publication; selfName?: string }> = ({
       )}
       <div className="text-sm">{concatenatedAuthors}</div>
       <div className="text-sm italic">
-        {pub.venue} (<UrlLink href={pub.venueLink}>{pub.venueAbbr}</UrlLink>)
+        {pub.venue}
+        {pub.venueLink && pub.venueAbbr && (
+          <UrlLink href={pub.venueLink}>{pub.venueAbbr}</UrlLink>
+        )}
       </div>
-    </>
+    </span>
   );
 };
 
