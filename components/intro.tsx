@@ -2,7 +2,7 @@ import { UrlLink } from "./ui/url-link";
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4 ">
+    <div className="flex flex-col gap-4 max-w-2xl m-auto">
       <p>
         {`Hello there! I'm Vic, a first-year Computer Science Ph.D. student at
         the University of Washington. `}
