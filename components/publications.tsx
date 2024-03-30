@@ -30,9 +30,11 @@ const PublicationEntry: React.FC<{ pub: Publication; selfName?: string }> = ({
       )}
       <div className="text-sm">{concatenatedAuthors}</div>
       <div className="text-sm italic">
-        {pub.venue}
+        {pub.venue}{" "}
         {pub.venueLink && pub.venueAbbr && (
-          <UrlLink href={pub.venueLink}>{pub.venueAbbr}</UrlLink>
+          <span>
+            (<UrlLink href={pub.venueLink}>{pub.venueAbbr}</UrlLink>)
+          </span>
         )}
       </div>
     </span>
