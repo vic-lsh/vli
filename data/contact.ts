@@ -15,6 +15,6 @@ export const CONTACT: ContactInfo = {
   titleName: "Shihang (Vic) Li",
   academicName: "Shihang Li",
   email: "shli [at] cs [dot] uw [dot] edu",
-  githubUsername: "vicshli",
+  githubUsername: "vic-lsh",
   profilePic: ImageProfile,
 };
