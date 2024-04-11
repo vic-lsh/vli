@@ -14,7 +14,7 @@ export interface ContactInfo {
 export const CONTACT: ContactInfo = {
   titleName: "Shihang (Vic) Li",
   academicName: "Shihang Li",
-  email: "shli [at] cs [dot] uw [dot] edu",
+  email: "shli[at]cs[dot]uw[dot]edu",
   githubUsername: "vic-lsh",
   profilePic: ImageProfile,
 };
