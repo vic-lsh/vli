@@ -59,6 +59,21 @@ const ContactInfo: React.FC<{ contact: ContactInfo }> = ({ contact }) => {
         />
         <span className="underline font-mono text-sm">{contact.email}</span>
       </ContactInfoContainer>
+
+      <LinkToNewTab
+        href={"https://scholar.google.com/citations?hl=en&user=VOeZIsEAAAAJ"}
+      >
+        <ContactInfoContainer>
+          <Image
+            src="/google-scholar-logo.svg"
+            alt="Google Scholar Logo"
+            width="16"
+            height="16"
+            className="grayscale"
+          />
+          <span className="underline font-mono text-sm">Google Scholar</span>
+        </ContactInfoContainer>
+      </LinkToNewTab>
     </div>
   );
 };
