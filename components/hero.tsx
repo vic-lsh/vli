@@ -49,17 +49,6 @@ const ContactInfo: React.FC<{ contact: ContactInfo }> = ({ contact }) => {
         </ContactInfoContainer>
       </LinkToNewTab>
 
-      <ContactInfoContainer>
-        <Image
-          src="/mail-icon.png"
-          alt="Mail Logo"
-          width="16"
-          height="16"
-          className="dark:invert-90"
-        />
-        <span className="underline font-mono text-sm">{contact.email}</span>
-      </ContactInfoContainer>
-
       <LinkToNewTab
         href={"https://scholar.google.com/citations?hl=en&user=VOeZIsEAAAAJ"}
       >
@@ -74,6 +63,17 @@ const ContactInfo: React.FC<{ contact: ContactInfo }> = ({ contact }) => {
           <span className="underline font-mono text-sm">Google Scholar</span>
         </ContactInfoContainer>
       </LinkToNewTab>
+
+      <ContactInfoContainer>
+        <Image
+          src="/mail-icon.png"
+          alt="Mail Logo"
+          width="16"
+          height="16"
+          className="dark:invert-90"
+        />
+        <span className="underline font-mono text-sm">{contact.email}</span>
+      </ContactInfoContainer>
     </div>
   );
 };
