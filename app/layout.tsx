@@ -5,9 +5,9 @@ import { StyledBody } from "../components/ui/styled-body";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  title: "Shihang (Vic) Li",
+  title: "Vic Shihang Li",
   description:
-    "Shihang (Vic) Li, a curious student figuring out his path in Computer Science.",
+    "Vic Shihang Li, a curious student figuring out his path in Computer Science.",
 };
 
 export default function RootLayout({
