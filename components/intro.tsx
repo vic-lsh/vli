@@ -4,27 +4,22 @@ export const Intro = () => {
   return (
     <div className="flex flex-col gap-4 max-w-2xl m-auto">
       <p>
-        {`Hello there! I'm Vic, a first-year Computer Science Ph.D. student at
-        the University of Washington. `}
+        {`Hello there! I'm Vic, a first-year CS PhD student at
+        University of Washington. `}
 
-        {`I am advised by `}
-        <UrlLink href="https://homes.cs.washington.edu/~simpeter/">
-          Simon Peter
-        </UrlLink>
-        {` of the `}
+        {`I am part of the `}
         <UrlLink href="https://syslab.cs.washington.edu/">
           UW Computer Systems Lab
         </UrlLink>
-        {`. `}
-        {`Before UW, I worked with `}
-        <UrlLink href="https://cs.brown.edu/people/malte/">
-          Malte Schwarzkopf
+        {`, advised by `}
+        <UrlLink href="https://homes.cs.washington.edu/~simpeter/">
+          Simon Peter
         </UrlLink>
         {` and `}
-        <UrlLink href="http://www.abelay.me/">Adam Belay</UrlLink>
-        {` as a member of the `}
-        <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>
-        {` at Brown.`}
+        <UrlLink href="https://www.cs.washington.edu/people/faculty/tom">
+          Tom Anderson
+        </UrlLink>
+        {`. `}
       </p>
       <p>
         <span>
@@ -36,8 +31,19 @@ export const Intro = () => {
         </span>
       </p>
       <p>
-        {`I studied Finance and CS as an undergraduate at NYU Stern School of Business,
+        {`Before UW, I worked with `}
+        <UrlLink href="https://cs.brown.edu/people/malte/">
+          Malte Schwarzkopf
+        </UrlLink>
+        {` and `}
+        <UrlLink href="http://www.abelay.me/">Adam Belay</UrlLink>
+        {` as a member of the `}
+        <UrlLink href="https://etos.cs.brown.edu">ETOS group</UrlLink>
+        {` at Brown. `}
+        {`Before that, I studied Finance and CS as an undergraduate at NYU Stern School of Business,
         with a focus on high-performance quantitative trading.`}
+      </p>
+      <p>
       </p>
     </div>
   );
