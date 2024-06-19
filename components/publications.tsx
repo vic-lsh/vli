@@ -49,9 +49,11 @@ export const Publications: React.FC<{
     <SectionContainer>
       <SectionHeader>Publications</SectionHeader>
       <SectionContent>
-        {pubs.map((pub, index) => (
-          <PublicationEntry key={index} pub={pub} selfName={selfName} />
-        ))}
+        <span className="flex flex-col gap-2">
+          {pubs.map((pub, index) => (
+            <PublicationEntry key={index} pub={pub} selfName={selfName} />
+          ))}
+        </span>
       </SectionContent>
     </SectionContainer>
   );
