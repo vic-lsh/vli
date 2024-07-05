@@ -22,8 +22,9 @@ const mach_vldb_demo = {
         "David Cohen",
         "Stan Zdonik",
     ],
-    venue: "VLDB '24 (Demo Track)",
-    venueLink: "https://vldb.org/2024/",
+    venue: "50th International Conference on Very Large Databases",
+    venueAbbr: "VLDB '24, Demo Track",
+    venueLink: "https://vldb.org/2024/?papers-demo",
 };
 
 const quicksand = {
