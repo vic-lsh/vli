@@ -39,7 +39,7 @@ const quicksand = {
     "Seo Jin Park",
     "Malte Schwarzkopf",
   ],
-  venue: "Under one-shot revision",
+  venue: "NSDI '25 (To Appear)",
 };
 
 const quicksand_hotos = {
@@ -60,7 +60,7 @@ const quicksand_hotos = {
 };
 
 export const PUBLICATIONS: Publication[] = [
-  mach_vldb_demo,
   quicksand,
+  mach_vldb_demo,
   quicksand_hotos,
 ];
