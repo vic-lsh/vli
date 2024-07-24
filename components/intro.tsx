@@ -5,7 +5,7 @@ export const Intro = () => {
     <div className="flex flex-col gap-4 max-w-2xl m-auto">
       <p>
         {`Hello there! I'm Vic, a first-year CS PhD student at
-        University of Washington. `}
+        the University of Washington. `}
 
         {`I am part of the `}
         <UrlLink href="https://syslab.cs.washington.edu/">
@@ -43,8 +43,7 @@ export const Intro = () => {
         {`Before that, I studied Finance and CS as an undergraduate at NYU Stern School of Business,
         with a focus on high-performance quantitative trading.`}
       </p>
-      <p>
-      </p>
+      <p></p>
     </div>
   );
 };

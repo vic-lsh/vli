@@ -11,6 +11,8 @@ import { Teaching } from "../components/teaching";
 
 import { TEACHING } from "../data/teaching";
 import { CONTACT } from "../data/contact";
+import { NEWS } from "../data/news";
+import News from "../components/news";
 
 const FEATURE_FLAGS = {
   enable_blogs: false,
@@ -31,6 +33,7 @@ export default function Home() {
         <HeroArea contact={CONTACT} />
         <div className="max-w-6xl flex flex-col mt-2 gap-12">
           <Intro />
+          <News news={NEWS} />
           <Publications
             pubs={PUBLICATIONS}
             selfName={CONTACT.academicName ?? CONTACT.titleName}
