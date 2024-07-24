@@ -22,8 +22,8 @@ export default function News({ news }: { news: News[] }) {
       <SectionHeader>News</SectionHeader>
       <SectionContent>
         <span className="flex flex-col gap-2">
-          {news.map((n) => (
-            <NewsEntry news={n} />
+          {news.map((n, i) => (
+            <NewsEntry key={i} news={n} />
           ))}
         </span>
       </SectionContent>
