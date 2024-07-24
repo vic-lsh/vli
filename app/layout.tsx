@@ -28,7 +28,7 @@ export default function RootLayout({
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=optional"
           rel="stylesheet"
         />
 
